@@ -11,7 +11,7 @@ class AchievementState:
             with open(STATE_FILE, "w", encoding="utf-8") as file:
                 json.dump({
                     "achievements": [],
-                    "count": 0,
+                    "unlocked": 0,
                     "total": 0
                 }, file, indent=2)
 
@@ -39,7 +39,7 @@ class AchievementState:
         cls.ensure_files()
         return cls._load_json(STATE_FILE, {
             "achievements": [],
-            "count": 0,
+            "unlocked": 0,
             "total": 0
         })
 

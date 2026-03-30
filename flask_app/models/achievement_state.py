@@ -2,7 +2,6 @@ import json
 import os
 from flask_app.config.settings import DATA_DIR, STATE_FILE, EVENT_FILE
 
-
 class AchievementState:
     @staticmethod
     def ensure_files():

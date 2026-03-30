@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/flask_app/stream_probe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="stream probe tests">
+      <change afterPath="$PROJECT_DIR$/flask_app/services/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/controllers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/controllers/overlay_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/controllers/overlay_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/models/achievement_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/models/achievement_state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/stream_probe.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/services/steam_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +62,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flask_app/services" />
       <recent name="$PROJECT_DIR$/flask_app" />
     </key>
   </component>
@@ -113,6 +104,19 @@
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
     </task>
+    <task id="LOCAL-00001" summary="stream probe tests">
+      <option name="closed" value="true" />
+      <created>1774910936464</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774910936464</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="stream probe tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="stream probe tests" />
   </component>
 </project>

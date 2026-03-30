@@ -50,3 +50,39 @@ class SteamService:
         response = requests.get(url, params=params, timeout=15)
         response.raise_for_status()
         return response.json()
+
+    def build_achievement_state(self, appid):
+        schema = self.get_schema_for_game(appid)
+        player = self.get_player_achievements(appid)
+
+        schema_ach = schema["game"]["availableGameStats"]["achievements"]
+        player_ach = player["playerstats"]["achievements"]
+
+        # convert player list to dict for fast lookup
+        player_lookup = {a["apiname"]: a for a in player_ach}
+
+        merged = []
+
+        for ach in schema_ach:
+            api_name = ach["name"]
+            player_data = player_lookup.get(api_name, {})
+
+            merged.append({
+                "apiname": api_name,
+                "display_name": ach.get("displayName"),
+                "description": ach.get("description"),
+                "icon": ach.get("icon"),
+                "icon_gray": ach.get("icongray"),
+                "achieved": player_data.get("achieved", 0),
+                "unlocktime": player_data.get("unlocktime", 0),
+            })
+
+        unlocked = sum(1 for a in merged if a["achieved"] == 1)
+
+        return {
+            "game_name": schema["game"]["gameName"],
+            "appid": appid,
+            "total": len(merged),
+            "unlocked": unlocked,
+            "achievements": merged
+        }

@@ -1,4 +1,8 @@
+import os
 from flask import Flask
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = "dev_secret_key_replace_me"
+app.secret_key = os.getenv("SECRET_KEY")

@@ -17,3 +17,18 @@ body {
 #latest.show{
     opacity: 1;
 }
+
+.item.locked {
+    opacity: 0.5;
+}
+
+.item.unlocked {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.divider {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.2);
+}

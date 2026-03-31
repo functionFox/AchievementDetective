@@ -12,9 +12,19 @@ async function updateOverlay() {
     document.getElementById("counter").innerText = `${state.unlocked} / ${state.total}`;
 
     const list = document.getElementById("list");
-    list.innerHTML = state.achievements
-        .map(achievement => `<div class="item">${achievement.display_name}</div>`)
-        .join("");
+
+    const unlocked = state.achievements.filter(a => a.achieved);
+    const locked = state.achievements.filter(a => !a.achieved);
+
+    const sorted = [...unlocked, ...locked];
+
+    const html = [
+        ...unlocked.map(a => `<div class="item unlocked">${a.display_name}</div>`),
+        `<hr class="divider">`,
+        ...locked.map(a => `<div class="item locked">${a.display_name}</div>`)
+    ].join("");
+
+    list.innerHTML = html;
 
     if (event.timestamp > lastEventTimestamp && event.latest) {
         lastEventTimestamp = event.timestamp;

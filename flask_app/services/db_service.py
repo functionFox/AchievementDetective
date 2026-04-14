@@ -33,6 +33,22 @@ def init_db() -> None:
             )
         """)
 
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS achievements (
+                app_id TEXT NOT NULL,
+                api_name TEXT NOT NULL,
+                display_name TEXT,
+                description TEXT,
+                icon TEXT,
+                icon_gray TEXT,
+                achieved INTEGER NOT NULL,
+                unlocktime INTEGER NOT NULL,
+                created_at INTEGER NOT NULL,
+                updated_at INTEGER NOT NULL,
+                PRIMARY KEY (app_id, api_name)
+            )
+        """)
+
         conn.commit()
 
 def upsert_games(games: list[dict[str, str]]) -> None:
@@ -47,7 +63,10 @@ def upsert_games(games: list[dict[str, str]]) -> None:
                 VALUES (?, ?, ?, ?, ?)
                 ON CONFLICT(app_id) DO UPDATE SET
                     name = excluded.name,
-                    updated_at = excluded.updated_at,
+                    updated_at = CASE
+                        WHEN games.name != excluded.name THEN excluded.updated_at
+                        ELSE games.updated_at
+                    END,
                     last_seen = excluded.last_seen
             """, (
                 game["app_id"],
@@ -128,3 +147,47 @@ def get_game_by_app_id(app_id: str) -> dict[str, str | int] | None:
         "updated_at": row[3],
         "last_seen": row[4],
     }
+
+def upsert_achievements(app_id: str, achievements: list[dict]) -> None:
+    now = int(time.time())
+
+    with get_connection() as conn:
+        cursor = conn.cursor()
+
+        for ach in achievements:
+            cursor.execute("""
+                INSERT INTO achievements (
+                    app_id,
+                    api_name,
+                    display_name,
+                    description,
+                    icon,
+                    icon_gray,
+                    achieved,
+                    unlocktime,
+                    created_at,
+                    updated_at
+                )
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(app_id, api_name) DO UPDATE SET
+                    display_name = excluded.display_name,
+                    description = excluded.description,
+                    icon = excluded.icon,
+                    icon_gray = excluded.icon_gray,
+                    achieved = excluded.achieved,
+                    unlocktime = excluded.unlocktime,
+                    updated_at = excluded.updated_at
+            """, (
+                app_id,
+                ach["apiname"],
+                ach.get("display_name"),
+                ach.get("description"),
+                ach.get("icon"),
+                ach.get("icon_gray"),
+                ach.get("achieved", 0),
+                ach.get("unlocktime", 0),
+                now,
+                now,
+            ))
+
+        conn.commit()

@@ -105,62 +105,6 @@
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
     </task>
-    <task id="LOCAL-00113" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776407598353</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1776407598353</updated>
-    </task>
-    <task id="LOCAL-00114" summary="Tuning Obelisk mode">
-      <option name="closed" value="true" />
-      <created>1776407847351</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1776407847351</updated>
-    </task>
-    <task id="LOCAL-00115" summary="Tuning Obelisk mode">
-      <option name="closed" value="true" />
-      <created>1776407960661</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1776407960661</updated>
-    </task>
-    <task id="LOCAL-00116" summary="Tuning Obelisk mode">
-      <option name="closed" value="true" />
-      <created>1776408044003</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1776408044003</updated>
-    </task>
-    <task id="LOCAL-00117" summary="Tuning Obelisk mode">
-      <option name="closed" value="true" />
-      <created>1776408311831</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1776408311831</updated>
-    </task>
-    <task id="LOCAL-00118" summary="Tuning Obelisk mode">
-      <option name="closed" value="true" />
-      <created>1776408512173</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1776408512173</updated>
-    </task>
-    <task id="LOCAL-00119" summary="Tuning Obelisk mode">
-      <option name="closed" value="true" />
-      <created>1776408728547</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1776408728547</updated>
-    </task>
     <task id="LOCAL-00120" summary="Tuning Obelisk mode">
       <option name="closed" value="true" />
       <created>1776408788088</created>
@@ -497,7 +441,63 @@
       <option name="project" value="LOCAL" />
       <updated>1776424057166</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776424074216</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1776424074216</updated>
+    </task>
+    <task id="LOCAL-00163" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776424089164</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1776424089165</updated>
+    </task>
+    <task id="LOCAL-00164" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776424145710</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1776424145710</updated>
+    </task>
+    <task id="LOCAL-00165" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776424236090</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1776424236090</updated>
+    </task>
+    <task id="LOCAL-00166" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776424298239</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1776424298239</updated>
+    </task>
+    <task id="LOCAL-00167" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776424356497</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1776424356497</updated>
+    </task>
+    <task id="LOCAL-00168" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776424370885</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1776424370885</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -3,21 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Achievement Detective</title>
+  <title>Achievement Overlay</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div id="ticker-root">
-    <div id="ticker-left">
-      <div id="ticker-label">LIVE FEED</div>
-      <div id="latest"></div>
-    </div>
-
-    <div id="ticker-track-wrap">
-      <div id="ticker-track"></div>
-    </div>
-
+  <div id="overlay">
+    <div id="latest"></div>
     <div id="counter">0 / 0</div>
+    <div id="list"></div>
   </div>
 
   <script src="{{ url_for('static', filename='app.js') }}"></script>

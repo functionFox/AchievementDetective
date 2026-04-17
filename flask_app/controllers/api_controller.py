@@ -28,4 +28,4 @@ def get_achievements():
         state = AchievementService.refresh_game_achievements(appid)
         return jsonify(state)
 
-    return jsonify (AchievementState.load_state())
+    return jsonify(AchievementState.load_state())

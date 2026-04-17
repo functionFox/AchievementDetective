@@ -119,6 +119,27 @@ async function applySelectedGame() {
     await loadAchievements(appId);
 }
 
+async function refreshSelectedGame() {
+    const select = document.getElementById("game-select");
+    const appId = select.value;
+
+    if (!appId) {
+        return;
+    }
+
+    const response = await fetch("/api/refresh-achievements", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ app_id: appId })
+    });
+
+    await response.json();
+    await loadActiveGame();
+    await loadAchievements(appId);
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     await loadGames();
     const activeGameData = await loadActiveGame();
@@ -130,4 +151,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     document
         .getElementById("apply-game-button")
         .addEventListener("click", applySelectedGame);
+
+    document
+        .getElementById("refresh-game-button")
+        .addEventListener("click", refreshSelectedGame);
 });

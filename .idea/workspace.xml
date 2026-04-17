@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="corrections to db_service">
-      <change beforePath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" afterDir="false" />
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="corrections to api_controller">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/templates/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/config.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -363,7 +365,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776395937090</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="corrections to api_controller">
+      <option name="closed" value="true" />
+      <created>1776396054637</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1776396054637</updated>
+    </task>
+    <task id="LOCAL-00034" summary="corrections to api_controller">
+      <option name="closed" value="true" />
+      <created>1776396115384</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1776396115384</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -375,8 +393,8 @@
     <MESSAGE value="database implementation" />
     <MESSAGE value="Integrating achievement service" />
     <MESSAGE value="Adding configuration page" />
-    <MESSAGE value="corrections to api_controller" />
     <MESSAGE value="corrections to db_service" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrections to db_service" />
+    <MESSAGE value="corrections to api_controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="corrections to api_controller" />
   </component>
 </project>

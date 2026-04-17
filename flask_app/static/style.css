@@ -137,3 +137,32 @@ body {
         transform: translateY(-85%);
     }
 }
+
+#list.mode-obelisk .item,
+.ticker-item,
+#latest .item {
+    padding: 6px 10px;
+    border-radius: 10px;
+    background: rgba(20, 26, 40, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.achievement-icon {
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2px;
+}
+
+#list.mode-obelisk .item.unlocked,
+.ticker-item.unlocked,
+#latest .item.unlocked {
+    border-color: rgba(255, 215, 120, 0.35);
+}
+
+#list.mode-obelisk .item.locked,
+.ticker-item.locked {
+    border-color: rgba(180, 180, 180, 0.18);
+}

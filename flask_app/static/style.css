@@ -85,12 +85,13 @@ body {
 
 #list {
     width: 420px;
-    height: 180px;
+    height: 240px;
     overflow: hidden;
     position: relative;
 }
 
 #list.mode-obelisk {
+    font-size: 1.15rem;
     perspective: 350px;
     perspective-origin: center 100%;
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 100%);
@@ -130,7 +131,7 @@ body {
 
 @keyframes obelisk-scroll {
     from {
-        transform: translateY(50%);
+        transform: translateY(28%);
     }
     to {
         transform: translateY(-85%);

@@ -132,6 +132,6 @@ body {
         transform: translateY(50%) rotateX(45deg);
     }
     to {
-        transform: translateY(-85%) rotateX(72deg);
+        transform: translateY(-85%) rotateX(45deg);
     }
 }

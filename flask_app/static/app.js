@@ -71,7 +71,38 @@ async function loadActiveGame() {
     }
 }
 
+async function applySelectedGame() {
+    const select = document.getElementById("game-select");
+    const appId = select.value;
+
+    if (!appId) {
+        return;
+    }
+
+    const response = await fetch("/api/select-game", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ app_id: appId })
+    });
+
+    const state = await response.json();
+
+    document.getElementById("active-game-output").textContent =
+        JSON.stringify({
+            active_app_id: appId
+        }, null, 2);
+
+    document.getElementById("achievements-output").textContent =
+        JSON.stringify(state, null, 2);
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     await loadGames();
     await loadActiveGame();
+
+    document
+        .getElementById("apply-game-button")
+        .addEventListener("click", applySelectedGame);
 });

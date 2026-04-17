@@ -41,3 +41,36 @@ async function updateOverlay() {
 
 setInterval(updateOverlay, 1000);
 updateOverlay();
+
+
+async function loadGames() {
+    const response = await fetch("/api/games");
+    const games = await response.json();
+
+    const select = document.getElementById("game-select");
+    select.innerHTML = "";
+
+    for (const game of games) {
+        const option = document.createElement("option");
+        option.value = game.app_id;
+        option.textContent = game.name;
+        select.appendChild(option);
+    }
+}
+
+async function loadActiveGame() {
+    const response = await fetch("/api/active-game");
+    const data = await response.json();
+
+    const output = document.getElementById("active-game-output");
+    output.textContent = JSON.stringify(data, null, 2);
+
+    if (data.active_app_id) {
+        document.getElementById("game-select").value = data.active_app_id;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadGames();
+    await loadActiveGame();
+});

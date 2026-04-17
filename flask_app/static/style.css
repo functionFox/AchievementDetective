@@ -24,17 +24,6 @@ body {
     -webkit-text-stroke-color: var(--overlay-text-stroke-color);
 }
 
-#overlay .item span,
-#overlay .ticker-item span,
-#overlay #latest span,
-#counter {
-    text-shadow:
-        1px 0 0 var(--overlay-text-stroke-color),
-        -1px 0 0 var(--overlay-text-stroke-color),
-        0 1px 0 var(--overlay-text-stroke-color),
-        0 -1px 0 var(--overlay-text-stroke-color);
-}
-
 #latest {
     opacity: 0;
     transition: opacity 0.3s ease;

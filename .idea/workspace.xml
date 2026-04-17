@@ -105,22 +105,6 @@
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
     </task>
-    <task id="LOCAL-00100" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776406943723</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1776406943723</updated>
-    </task>
-    <task id="LOCAL-00101" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776407024100</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1776407024100</updated>
-    </task>
     <task id="LOCAL-00102" summary="Adding display modes">
       <option name="closed" value="true" />
       <created>1776407131451</created>
@@ -497,7 +481,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776422265692</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776422501054</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1776422501054</updated>
+    </task>
+    <task id="LOCAL-00150" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776422707227</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1776422707227</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -8,28 +8,46 @@
 <body>
     <h1>Achievement Detective Config</h1>
 
+        <div class="config-controls">
+    <section class="config-group">
+        <h2>Game Settings</h2>
+
         <label for="game-select">Game</label>
-    <select id="game-select">
-        <option value="">Loading games...</option>
-    </select>
+        <select id="game-select">
+            <option value="">Loading games...</option>
+        </select>
 
-    <label for="display-mode-select">Display Mode</label>
-    <select id="display-mode-select">
-        <option value="obelisk">Obelisk</option>
-        <option value="ticker">Ticker</option>
-    </select>
+        <label for="display-mode-select">Display Mode</label>
+        <select id="display-mode-select">
+            <option value="obelisk">Obelisk</option>
+            <option value="ticker">Ticker</option>
+        </select>
 
-    <label for="text-color-input">Text Color</label>
-    <input id="text-color-input" type="color" value="#000000">
+        <label for="ticker-strip-color-input">Ticker Bar Color</label>
+        <input id="ticker-strip-color-input" type="color" value="#141a28">
 
-    <label for="text-stroke-width-input">Stroke Width</label>
-    <input id="text-stroke-width-input" type="range" min="0" max="4" step="1" value="0">
+        <label for="ticker-strip-opacity-input">Ticker Bar Opacity</label>
+        <input id="ticker-strip-opacity-input" type="range" min="0" max="100" step="1" value="78">
+    </section>
 
-    <label for="text-stroke-color-input">Stroke Color</label>
-    <input id="text-stroke-color-input" type="color" value="#ffffff">
+    <section class="config-group">
+        <h2>Text Settings</h2>
 
-    <button id="apply-game-button" type="button">Apply</button>
-    <button id="refresh-game-button" type="button">Refresh Achievements</button>
+        <label for="text-color-input">Text Color</label>
+        <input id="text-color-input" type="color" value="#000000">
+
+        <label for="text-stroke-width-input">Stroke Width</label>
+        <input id="text-stroke-width-input" type="range" min="0" max="4" step="1" value="0">
+
+        <label for="text-stroke-color-input">Stroke Color</label>
+        <input id="text-stroke-color-input" type="color" value="#ffffff">
+    </section>
+
+    <div class="config-actions">
+        <button id="apply-game-button" type="button">Apply</button>
+        <button id="refresh-game-button" type="button">Refresh Achievements</button>
+    </div>
+</div>
 
     <h2>Active Game</h2>
     <pre id="active-game-output">No active game selected.</pre>

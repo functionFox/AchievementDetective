@@ -46,13 +46,6 @@ body {
     flex-shrink: 0;
 }
 
-#list {
-    width: 420px;
-    height: 420px;
-    overflow: hidden;
-    position: relative;
-}
-
 .ticker-track {
     display: flex;
     align-items: center;
@@ -88,6 +81,13 @@ body {
 .ticker-track {
     width: max-content;
     animation: ticker-scroll 30s linear infinite;
+}
+
+#list {
+    width: 420px;
+    height: 420px;
+    overflow: hidden;
+    position: relative;
 }
 
 #list.mode-obelisk {
@@ -134,4 +134,4 @@ body {
     to {
         transform: translateY(-85%) rotateX(63deg);
     }
-}
+}}

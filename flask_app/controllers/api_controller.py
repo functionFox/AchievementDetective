@@ -68,11 +68,16 @@ def refresh_achievements():
 def select_game():
     data = request.get_json(silent=True) or {}
     app_id = data.get("app_id")
+    display_mode = data.get("display_mode")
 
     if not app_id:
         return jsonify({"error": "Missing app_id"}), 400
 
     set_setting("active_appid", str(app_id))
+
+    if display_mode in {"obelisk", "ticker"}:
+        set_setting("display_mode", display_mode)
+
     state = AchievementService.refresh_game_achievements(app_id)
 
     return jsonify(state)

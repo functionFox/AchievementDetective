@@ -147,8 +147,6 @@ html[data-display-mode="ticker"] body {
   transform: translateY(-50%);
 }
 
-}
-
 #list.mode-ticker::before {
   content: "";
   position: absolute;

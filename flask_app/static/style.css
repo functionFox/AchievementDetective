@@ -101,6 +101,8 @@ body {
     justify-content: center;
     align-items: flex-end;
     min-height: 420px;
+    padding-top: 180px;
+    box-sizing: border-box;
 }
 
 #list.mode-obelisk .obelisk-track {

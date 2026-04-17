@@ -107,22 +107,6 @@
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
     </task>
-    <task id="LOCAL-00012" summary="database implementation">
-      <option name="closed" value="true" />
-      <created>1776393178565</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1776393178565</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Integrating achievement service">
-      <option name="closed" value="true" />
-      <created>1776393577811</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1776393577811</updated>
-    </task>
     <task id="LOCAL-00014" summary="Integrating achievement service">
       <option name="closed" value="true" />
       <created>1776393848946</created>
@@ -499,7 +483,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776400230592</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776400967834</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1776400967835</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776401087398</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1776401087398</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

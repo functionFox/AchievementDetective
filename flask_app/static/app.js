@@ -23,7 +23,7 @@ function renderObelisk(state) {
     const unlocked = state.achievements.filter(a => a.achieved);
     const locked = state.achievements.filter(a => !a.achieved);
 
-    return [
+    const content = [
         ...unlocked.map(a => `
             <div class="item unlocked">
                 <img class="achievement-icon" src="/static/${a.icon}" alt="">
@@ -38,6 +38,14 @@ function renderObelisk(state) {
             </div>
         `)
     ].join("");
+
+    return `
+        <div class="obelisk-crawl">
+            <div class="obelisk-track">
+                ${content}
+            </div>
+        </div>
+    `;
 }
 
 function renderTicker(state) {

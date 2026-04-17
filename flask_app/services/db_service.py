@@ -223,3 +223,34 @@ def get_achievements_by_app_id(app_id: str) -> list[dict]:
         }
         for row in rows
     ]
+def get_achievement_state_by_app_id(app_id: str) -> dict | None:
+    game = get_game_by_app_id(app_id)
+    achievements = get_achievements_by_app_id(app_id)
+
+    if game is None or not achievements:
+        return None
+
+    unlocked = sum(1 for achievement in achievements if achievement["achieved"])
+    total = len(achievements)
+
+    normalized = [
+        {
+            "apiname": achievement["api_name"],
+            "display_name": achievement["display_name"],
+            "description": achievement["description"],
+            "icon": achievement["icon"],
+            "icon_gray": achievement["icon_gray"],
+            "achieved": achievement["achieved"],
+            "unlocktime": achievement["unlocktime"],
+        }
+        for achievement in achievements
+    ]
+
+    return {
+        "game_name": game["name"],
+        "appid": app_id,
+        "total": total,
+        "unlocked": unlocked,
+        "achievements": normalized,
+    }
+

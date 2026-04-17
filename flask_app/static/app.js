@@ -103,16 +103,12 @@ async function applySelectedGame() {
         body: JSON.stringify({ app_id: appId })
     });
 
-    const state = await response.json();
+        const state = await response.json();
 
-    document.getElementById("active-game-output").textContent =
-        JSON.stringify({
-            active_app_id: appId
-        }, null, 2);
+    await loadActiveGame();
 
     document.getElementById("achievements-output").textContent =
         JSON.stringify(state, null, 2);
-}
 
 document.addEventListener("DOMContentLoaded", async () => {
     await loadGames();

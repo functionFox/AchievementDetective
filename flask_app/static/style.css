@@ -129,7 +129,7 @@ body {
 
 @keyframes obelisk-scroll {
     from {
-        transform: translateY(50%) rotateX(45deg);
+        transform: translateY(50%) rotateX(63deg);
     }
     to {
         transform: translateY(-85%) rotateX(45deg);

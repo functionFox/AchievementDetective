@@ -105,22 +105,6 @@
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
     </task>
-    <task id="LOCAL-00068" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776404709760</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1776404709760</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776404773398</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1776404773398</updated>
-    </task>
     <task id="LOCAL-00070" summary="Adding display modes">
       <option name="closed" value="true" />
       <created>1776404845726</created>
@@ -497,7 +481,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776408044003</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Tuning Obelisk mode">
+      <option name="closed" value="true" />
+      <created>1776408311831</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1776408311831</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Tuning Obelisk mode">
+      <option name="closed" value="true" />
+      <created>1776408512173</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1776408512173</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

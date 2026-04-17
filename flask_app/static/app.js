@@ -99,16 +99,17 @@ function startTickerCycle() {
     }, { once: true });
 }
 
-function startObeliskCycle(durationMs) {
+function startObeliskCycle() {
     overlayCycleMode = "obelisk";
 
-    if (obeliskCycleTimeoutId) {
-        clearTimeout(obeliskCycleTimeoutId);
+    const list = document.getElementById("list");
+    const track = list.querySelector(".obelisk-track");
+
+    if (!track) {
+        return;
     }
 
-    const list = document.getElementById("list");
-
-    obeliskCycleTimeoutId = setTimeout(() => {
+    track.addEventListener("animationiteration", () => {
         if (overlayCycleMode !== "obelisk") {
             return;
         }
@@ -117,12 +118,11 @@ function startObeliskCycle(durationMs) {
             const nextDurationMs = getObeliskDurationMs(currentOverlayState);
             list.style.setProperty("--obelisk-duration", `${nextDurationMs}ms`);
             list.innerHTML = renderObelisk(currentOverlayState);
-            startObeliskCycle(nextDurationMs);
-            return;
+            startObeliskCycle();
+        } else {
+            startObeliskCycle();
         }
-
-        startObeliskCycle(durationMs);
-    }, durationMs);
+    }, { once: true });
 }
 
 async function updateOverlay() {
@@ -139,7 +139,7 @@ async function updateOverlay() {
 
     document.getElementById("counter").innerText = `${state.unlocked} / ${state.total}`;
 
-        const list = document.getElementById("list");
+    const list = document.getElementById("list");
     const activeGame = await fetchJson("/api/active-game");
     const displayMode = activeGame.display_mode || "obelisk";
 
@@ -161,10 +161,9 @@ async function updateOverlay() {
             list.innerHTML = renderTicker(state);
             startTickerCycle();
         } else {
-            const durationMs = getObeliskDurationMs(state);
             list.style.setProperty("--obelisk-duration", `${durationMs}ms`);
             list.innerHTML = renderObelisk(state);
-            startObeliskCycle(durationMs);
+            startObeliskCycle();
         }
     }
 

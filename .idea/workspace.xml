@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Tuning Obelisk mode" />
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Tuning Obelisk mode">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/templates/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/config.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,30 +109,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776405204992</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1776405204992</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776405237510</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1776405237510</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776405384572</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1776405384572</updated>
     </task>
     <task id="LOCAL-00077" summary="Adding display modes">
       <option name="closed" value="true" />
@@ -497,7 +478,31 @@
       <option name="project" value="LOCAL" />
       <updated>1776409180768</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Tuning Obelisk mode">
+      <option name="closed" value="true" />
+      <created>1776409545060</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1776409545060</updated>
+    </task>
+    <task id="LOCAL-00124" summary="Tuning Obelisk mode">
+      <option name="closed" value="true" />
+      <created>1776409652857</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1776409652857</updated>
+    </task>
+    <task id="LOCAL-00125" summary="Tuning Obelisk mode">
+      <option name="closed" value="true" />
+      <created>1776409771707</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1776409771707</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

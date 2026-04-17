@@ -71,6 +71,9 @@ def select_game():
     data = request.get_json(silent=True) or {}
     app_id = data.get("app_id")
     display_mode = data.get("display_mode")
+    text_color = data.get("text_color")
+    text_stroke_width = data.get("text_stroke_width")
+    text_stroke_color = data.get("text_stroke_color")
 
     if not app_id:
         return jsonify({"error": "Missing app_id"}), 400
@@ -80,6 +83,15 @@ def select_game():
     if display_mode in {"obelisk", "ticker"}:
         set_setting("display_mode", display_mode)
 
+    if text_color:
+        set_setting("text_color", str(text_color))
+
+    if text_stroke_width is not None:
+        set_setting("text_stroke_width", str(text_stroke_width))
+
+    if text_stroke_color:
+        set_setting("text_stroke_color", str(text_stroke_color))
+
     state = AchievementService.refresh_game_achievements(app_id)
 
     return jsonify(state)
@@ -88,11 +100,17 @@ def select_game():
 def get_active_game():
     active_app_id = get_setting("active_appid")
     display_mode = get_setting("display_mode") or "obelisk"
+    text_color = get_setting("text_color") or "#000000"
+    text_stroke_width = get_setting("text_stroke_width") or "0"
+    text_stroke_color = get_setting("text_stroke_color") or "#ffffff"
 
     if not active_app_id:
         return jsonify({
             "active_app_id": None,
             "display_mode": display_mode,
+            "text_color": text_color,
+            "text_stroke_width": text_stroke_width,
+            "text_stroke_color": text_stroke_color,
             "game": None
         })
 
@@ -101,6 +119,9 @@ def get_active_game():
     return jsonify({
         "active_app_id": active_app_id,
         "display_mode": display_mode,
+        "text_color": text_color,
+        "text_stroke_width": text_stroke_width,
+        "text_stroke_color": text_stroke_color,
         "game": game
     })
 

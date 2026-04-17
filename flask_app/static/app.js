@@ -9,6 +9,23 @@ async function fetchJson(url) {
     return await response.json();
 }
 
+function applyOverlayTextSettings(settings) {
+    document.documentElement.style.setProperty(
+        "--overlay-text-color",
+        settings.text_color || "#000000"
+    );
+
+    document.documentElement.style.setProperty(
+        "--overlay-text-stroke-width",
+        `${settings.text_stroke_width || 0}px`
+    );
+
+    document.documentElement.style.setProperty(
+        "--overlay-text-stroke-color",
+        settings.text_stroke_color || "#ffffff"
+    );
+}
+
 function commitPendingOverlayState() {
     if (pendingOverlayState) {
         currentOverlayState = pendingOverlayState;
@@ -143,6 +160,8 @@ async function updateOverlay() {
     const activeGame = await fetchJson("/api/active-game");
     const displayMode = activeGame.display_mode || "obelisk";
 
+    applyOverlayTextSettings(activeGame);
+
     list.classList.remove("mode-obelisk", "mode-ticker");
     list.classList.add(displayMode === "ticker" ? "mode-ticker" : "mode-obelisk");
 
@@ -218,6 +237,18 @@ async function loadActiveGame() {
         document.getElementById("display-mode-select").value = data.display_mode;
     }
 
+    if (data.text_color) {
+        document.getElementById("text-color-input").value = data.text_color;
+    }
+
+    if (data.text_stroke_width !== undefined) {
+        document.getElementById("text-stroke-width-input").value = data.text_stroke_width;
+    }
+
+    if (data.text_stroke_color) {
+        document.getElementById("text-stroke-color-input").value = data.text_stroke_color;
+    }
+
     return data;
 }
 
@@ -247,8 +278,15 @@ async function loadAchievements(appId) {
 async function applySelectedGame() {
     const select = document.getElementById("game-select");
     const modeSelect = document.getElementById("display-mode-select");
+    const textColorInput = document.getElementById("text-color-input");
+    const textStrokeWidthInput = document.getElementById("text-stroke-width-input");
+    const textStrokeColorInput = document.getElementById("text-stroke-color-input");
+
     const appId = select.value;
     const displayMode = modeSelect.value;
+    const textColor = textColorInput.value;
+    const textStrokeWidth = textStrokeWidthInput.value;
+    const textStrokeColor = textStrokeColorInput.value;
 
     if (!appId) {
         return;
@@ -261,11 +299,14 @@ async function applySelectedGame() {
         },
             body: JSON.stringify({
                 app_id: appId,
-                display_mode: displayMode
+                display_mode: displayMode,
+                text_color: textColor,
+                text_stroke_width: textStrokeWidth,
+                text_stroke_color: textStrokeColor
             })
     });
 
-        const state = await response.json();
+    const state = await response.json();
 
     await loadActiveGame();
 

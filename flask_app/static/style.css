@@ -5,8 +5,34 @@ body {
     font-family: sans-serif;
 }
 
+:root {
+    --overlay-text-color: #000000;
+    --overlay-text-stroke-width: 0px;
+    --overlay-text-stroke-color: #ffffff;
+}
+
 #overlay {
     padding: 20px;
+}
+
+#overlay,
+#overlay .item,
+#overlay .ticker-item,
+#overlay #latest {
+    color: var(--overlay-text-color);
+    -webkit-text-stroke-width: var(--overlay-text-stroke-width);
+    -webkit-text-stroke-color: var(--overlay-text-stroke-color);
+}
+
+#overlay .item span,
+#overlay .ticker-item span,
+#overlay #latest span,
+#counter {
+    text-shadow:
+        1px 0 0 var(--overlay-text-stroke-color),
+        -1px 0 0 var(--overlay-text-stroke-color),
+        0 1px 0 var(--overlay-text-stroke-color),
+        0 -1px 0 var(--overlay-text-stroke-color);
 }
 
 #latest {

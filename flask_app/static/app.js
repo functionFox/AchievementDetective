@@ -1,6 +1,8 @@
 let lastEventTimestamp = 0;
 let currentOverlayState = null;
 let pendingOverlayState = null;
+let overlayCycleMode = null;
+let obeliskCycleTimeoutId = null;
 
 async function fetchJson(url) {
     const response = await fetch(url);
@@ -57,6 +59,8 @@ function renderTicker(state) {
 }
 
 function startTickerCycle() {
+    overlayCycleMode = "ticker";
+
     const list = document.getElementById("list");
     const track = list.querySelector(".ticker-track");
 
@@ -65,17 +69,33 @@ function startTickerCycle() {
     }
 
     track.addEventListener("animationiteration", () => {
+        if (overlayCycleMode !== "ticker") {
+            return;
+        }
+
         if (commitPendingOverlayState()) {
             list.innerHTML = renderTicker(currentOverlayState);
+            startTickerCycle();
+        } else {
             startTickerCycle();
         }
     }, { once: true });
 }
 
 function startObeliskCycle() {
+    overlayCycleMode = "obelisk";
+
+    if (obeliskCycleTimeoutId) {
+        clearTimeout(obeliskCycleTimeoutId);
+    }
+
     const list = document.getElementById("list");
 
-    setTimeout(() => {
+    obeliskCycleTimeoutId = setTimeout(() => {
+        if (overlayCycleMode !== "obelisk") {
+            return;
+        }
+
         if (commitPendingOverlayState()) {
             list.innerHTML = renderObelisk(currentOverlayState);
         }
@@ -102,7 +122,17 @@ async function updateOverlay() {
     const activeGame = await fetchJson("/api/active-game");
     const displayMode = activeGame.display_mode || "obelisk";
 
-        if (!list.innerHTML.trim()) {
+    if (overlayCycleMode !== displayMode) {
+        list.innerHTML = "";
+        overlayCycleMode = null;
+
+        if (obeliskCycleTimeoutId) {
+            clearTimeout(obeliskCycleTimeoutId);
+            obeliskCycleTimeoutId = null;
+        }
+    }
+
+    if (!list.innerHTML.trim()) {
         if (displayMode === "ticker") {
             list.innerHTML = renderTicker(state);
             startTickerCycle();
@@ -110,6 +140,7 @@ async function updateOverlay() {
             list.innerHTML = renderObelisk(state);
             startObeliskCycle();
         }
+    }
     }
 
         if (event.timestamp > lastEventTimestamp && event.latest) {

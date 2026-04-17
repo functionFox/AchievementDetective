@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="achievement service now detects changes in achievement status">
-      <change afterPath="$PROJECT_DIR$/flask_app/services/icon_service.py" afterDir="false" />
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Implementing icon caching">
+      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,7 +411,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776396915376</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Implementing icon caching">
+      <option name="closed" value="true" />
+      <created>1776397037919</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1776397037919</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Implementing icon caching">
+      <option name="closed" value="true" />
+      <created>1776397154308</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1776397154308</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -427,6 +443,7 @@
     <MESSAGE value="corrections to api_controller" />
     <MESSAGE value="adjustments to config page" />
     <MESSAGE value="achievement service now detects changes in achievement status" />
-    <option name="LAST_COMMIT_MESSAGE" value="achievement service now detects changes in achievement status" />
+    <MESSAGE value="Implementing icon caching" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing icon caching" />
   </component>
 </project>

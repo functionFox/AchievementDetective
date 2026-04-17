@@ -18,10 +18,20 @@ async function updateOverlay() {
 
     const sorted = [...unlocked, ...locked];
 
-    const html = [
-        ...unlocked.map(a => `<div class="item unlocked">${a.display_name}</div>`),
+        const html = [
+        ...unlocked.map(a => `
+            <div class="item unlocked">
+                <img class="achievement-icon" src="/static/${a.icon}" alt="">
+                <span>${a.display_name}</span>
+            </div>
+        `),
         `<hr class="divider">`,
-        ...locked.map(a => `<div class="item locked">${a.display_name}</div>`)
+        ...locked.map(a => `
+            <div class="item locked">
+                <img class="achievement-icon" src="/static/${a.icon_gray || a.icon}" alt="">
+                <span>${a.display_name}</span>
+            </div>
+        `)
     ].join("");
 
     list.innerHTML = html;

@@ -39,9 +39,10 @@ async function updateOverlay() {
     }
 }
 
-setInterval(updateOverlay, 1000);
-updateOverlay();
-
+if (document.getElementById("counter")) {
+    setInterval(updateOverlay, 1000);
+    updateOverlay();
+}
 
 async function loadGames() {
     const response = await fetch("/api/games");

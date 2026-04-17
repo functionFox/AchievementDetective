@@ -69,6 +69,8 @@ async function loadActiveGame() {
     if (data.active_app_id) {
         document.getElementById("game-select").value = data.active_app_id;
     }
+
+    return data;
 }
 
 async function loadAchievements(appId) {
@@ -114,10 +116,7 @@ async function applySelectedGame() {
 
 document.addEventListener("DOMContentLoaded", async () => {
     await loadGames();
-    await loadActiveGame();
-
-    const activeGameOutput = document.getElementById("active-game-output");
-    const activeGameData = JSON.parse(activeGameOutput.textContent);
+    const activeGameData = await loadActiveGame();
 
     if (activeGameData.active_app_id) {
         await loadAchievements(activeGameData.active_app_id);

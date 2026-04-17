@@ -85,7 +85,7 @@ body {
 
 #list {
     width: 420px;
-    height: 160px;
+    height: 100px;
     overflow: hidden;
     position: relative;
     background: red;

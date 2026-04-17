@@ -107,22 +107,6 @@
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
     </task>
-    <task id="LOCAL-00078" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776405569613</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1776405569613</updated>
-    </task>
-    <task id="LOCAL-00079" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776405657904</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1776405657904</updated>
-    </task>
     <task id="LOCAL-00080" summary="Adding display modes">
       <option name="closed" value="true" />
       <created>1776405682389</created>
@@ -499,7 +483,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776410549978</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="Added text config options">
+      <option name="closed" value="true" />
+      <created>1776410741373</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1776410741373</updated>
+    </task>
+    <task id="LOCAL-00128" summary="Added text config options">
+      <option name="closed" value="true" />
+      <created>1776410886373</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1776410886373</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

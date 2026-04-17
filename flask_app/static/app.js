@@ -229,10 +229,6 @@ async function loadActiveGame() {
     const output = document.getElementById("active-game-output");
     output.textContent = JSON.stringify(data, null, 2);
 
-    if (data.active_app_id) {
-        document.getElementById("game-select").value = data.active_app_id;
-    }
-
     if (data.display_mode) {
         document.getElementById("display-mode-select").value = data.display_mode;
     }

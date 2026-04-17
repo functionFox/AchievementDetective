@@ -118,9 +118,12 @@ async function updateOverlay() {
 
     document.getElementById("counter").innerText = `${state.unlocked} / ${state.total}`;
 
-    const list = document.getElementById("list");
+        const list = document.getElementById("list");
     const activeGame = await fetchJson("/api/active-game");
     const displayMode = activeGame.display_mode || "obelisk";
+
+    list.classList.remove("mode-obelisk", "mode-ticker");
+    list.classList.add(displayMode === "ticker" ? "mode-ticker" : "mode-obelisk");
 
     if (overlayCycleMode !== displayMode) {
         list.innerHTML = "";
@@ -140,7 +143,6 @@ async function updateOverlay() {
             list.innerHTML = renderObelisk(state);
             startObeliskCycle();
         }
-    }
     }
 
         if (event.timestamp > lastEventTimestamp && event.latest) {

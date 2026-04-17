@@ -141,12 +141,6 @@ html[data-display-mode="ticker"] body {
   }
 }
 
-#list.mode-ticker .ticker-track {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 #list.mode-ticker::before {
   content: "";
   position: absolute;

@@ -161,6 +161,7 @@ async function updateOverlay() {
     const displayMode = activeGame.display_mode || "obelisk";
     document.documentElement.dataset.displayMode = displayMode;
 
+
     applyOverlayTextSettings(activeGame);
 
     list.classList.remove("mode-obelisk", "mode-ticker");

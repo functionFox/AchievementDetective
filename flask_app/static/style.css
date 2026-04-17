@@ -18,8 +18,8 @@
   --locked-border: rgba(180, 180, 180, 0.18);
 }
 
-html,
-body {
+html[data-display-mode="ticker"],
+html[data-display-mode="ticker"] body {
   margin: 0;
   width: 100%;
   height: var(--overlay-height);

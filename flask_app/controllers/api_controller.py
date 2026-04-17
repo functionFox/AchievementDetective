@@ -124,3 +124,24 @@ def get_games_route():
         games = get_games()
 
     return jsonify(games)
+
+@app.route("/api/test-toast", methods=["POST"])
+def test_toast():
+    data = request.get_json(silent=True) or {}
+
+    fake_achievement = {
+        "apiname": data.get("apiname", "TEST_TOAST"),
+        "display_name": data.get("display_name", "Test Achievement"),
+        "description": data.get("description", "This is a test toast."),
+        "icon": data.get("icon", ""),
+        "icon_gray": data.get("icon_gray", ""),
+        "achieved": 1,
+        "unlocktime": 0,
+    }
+
+    AchievementState.save_event({
+        "latest": fake_achievement,
+        "timestamp": int(time.time())
+    })
+
+    return jsonify({"ok": True, "latest": fake_achievement})

@@ -72,6 +72,18 @@ function startTickerCycle() {
     }, { once: true });
 }
 
+function startObeliskCycle() {
+    const list = document.getElementById("list");
+
+    setTimeout(() => {
+        if (commitPendingOverlayState()) {
+            list.innerHTML = renderObelisk(currentOverlayState);
+        }
+
+        startObeliskCycle();
+    }, 8000);
+}
+
 async function updateOverlay() {
     const latestState = await fetchJson("/api/state");
     const event = await fetchJson("/api/event");
@@ -96,6 +108,7 @@ async function updateOverlay() {
             startTickerCycle();
         } else {
             list.innerHTML = renderObelisk(state);
+            startObeliskCycle();
         }
     }
 

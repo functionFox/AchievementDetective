@@ -126,7 +126,7 @@ body {
     flex-direction: column;
     gap: 10px;
     will-change: transform;
-    animation: obelisk-scroll 16s linear infinite;
+    animation: obelisk-scroll var(--obelisk-duration, 16s) linear infinite;
 }
 
 @keyframes obelisk-scroll {

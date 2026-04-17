@@ -48,6 +48,15 @@ function renderObelisk(state) {
     `;
 }
 
+function getObeliskDurationMs(state) {
+    const count = state.achievements.length;
+
+    const baseMs = 8000;
+    const perItemMs = 900;
+
+    return baseMs + (count * perItemMs);
+}
+
 function renderTicker(state) {
     const items = state.achievements.map(a => `
         <div class="ticker-item ${a.achieved ? "unlocked" : "locked"}">
@@ -90,7 +99,7 @@ function startTickerCycle() {
     }, { once: true });
 }
 
-function startObeliskCycle() {
+function startObeliskCycle(durationMs) {
     overlayCycleMode = "obelisk";
 
     if (obeliskCycleTimeoutId) {
@@ -105,11 +114,15 @@ function startObeliskCycle() {
         }
 
         if (commitPendingOverlayState()) {
+            const nextDurationMs = getObeliskDurationMs(currentOverlayState);
+            list.style.setProperty("--obelisk-duration", `${nextDurationMs}ms`);
             list.innerHTML = renderObelisk(currentOverlayState);
+            startObeliskCycle(nextDurationMs);
+            return;
         }
 
-        startObeliskCycle();
-    }, 16000);
+        startObeliskCycle(durationMs);
+    }, durationMs);
 }
 
 async function updateOverlay() {
@@ -148,8 +161,10 @@ async function updateOverlay() {
             list.innerHTML = renderTicker(state);
             startTickerCycle();
         } else {
+            const durationMs = getObeliskDurationMs(state);
+            list.style.setProperty("--obelisk-duration", `${durationMs}ms`);
             list.innerHTML = renderObelisk(state);
-            startObeliskCycle();
+            startObeliskCycle(durationMs);
         }
     }
 

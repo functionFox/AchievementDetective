@@ -281,7 +281,7 @@ async function applySelectedGame() {
     const textStrokeWidth = textStrokeWidthInput.value;
     const textStrokeColor = textStrokeColorInput.value;
     const tickerStripColorInput = document.getElementById("ticker-strip-color-input");
-    const tickerStripColor = tickerStripColorInput.value;
+    const tickerStripColor = tickerStripColorInput ? tickerStripColorInput.value : null;
 
     if (!appId) {
         return;

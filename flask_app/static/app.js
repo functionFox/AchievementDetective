@@ -163,7 +163,6 @@ async function updateOverlay() {
     const displayMode = activeGame.display_mode || "obelisk";
     document.documentElement.dataset.displayMode = displayMode;
 
-
     applyOverlayTextSettings(activeGame);
 
     list.classList.remove("mode-obelisk", "mode-ticker");
@@ -226,18 +225,18 @@ async function loadGames() {
     }
 }
 
-async function loadActiveGame() {
-    const response = await fetch("/api/active-game");
-    const data = await response.json();
+async function loadActiveGame(syncControls = true) {
+  const response = await fetch("/api/active-game");
+  const data = await response.json();
 
-    const output = document.getElementById("active-game-output");
-    output.textContent = JSON.stringify(data, null, 2);
+  const output = document.getElementById("active-game-output");
+  output.textContent = JSON.stringify(data, null, 2);
 
-    if (data.display_mode) {
-        document.getElementById("display-mode-select").value = data.display_mode;
-    }
+  if (syncControls && data.display_mode) {
+    document.getElementById("display-mode-select").value = data.display_mode;
+  }
 
-    return data;
+  return data;
 }
 
 async function loadAchievements(appId) {
@@ -358,7 +357,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (document.getElementById("game-select")) {
         setInterval(async () => {
-            const activeGame = await loadActiveGame();
+            const activeGame = await loadActiveGame(false);
 
             if (activeGame.active_app_id) {
                 await loadAchievements(activeGame.active_app_id);

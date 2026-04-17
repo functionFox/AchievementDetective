@@ -105,46 +105,6 @@
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
     </task>
-    <task id="LOCAL-00023" summary="Adding configuration page">
-      <option name="closed" value="true" />
-      <created>1776394839787</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1776394839787</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Adding configuration page">
-      <option name="closed" value="true" />
-      <created>1776394971656</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1776394971656</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Adding configuration page">
-      <option name="closed" value="true" />
-      <created>1776395076068</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1776395076068</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Adding configuration page">
-      <option name="closed" value="true" />
-      <created>1776395185533</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1776395185533</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Adding configuration page">
-      <option name="closed" value="true" />
-      <created>1776395252366</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1776395252366</updated>
-    </task>
     <task id="LOCAL-00028" summary="Adding configuration page">
       <option name="closed" value="true" />
       <created>1776395398777</created>
@@ -497,7 +457,47 @@
       <option name="project" value="LOCAL" />
       <updated>1776404990665</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776405097981</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1776405097981</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776405175948</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1776405175949</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776405204992</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1776405204992</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776405237510</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1776405237510</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776405384572</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1776405384572</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

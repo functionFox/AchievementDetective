@@ -191,3 +191,35 @@ def upsert_achievements(app_id: str, achievements: list[dict]) -> None:
             ))
 
         conn.commit()
+
+def get_achievements_by_app_id(app_id: str) -> list[dict]:
+    with get_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT
+                api_name,
+                display_name,
+                description,
+                icon,
+                icon_gray,
+                achieved,
+                unlocktime
+            FROM achievements
+            WHERE app_id = ?
+            ORDER BY display_name COLLATE NOCASE
+        """, (app_id,))
+
+        rows = cursor.fetchall()
+
+    return [
+        {
+            "api_name": row[0],
+            "display_name": row[1],
+            "description": row[2],
+            "icon": row[3],
+            "icon_gray": row[4],
+            "achieved": row[5],
+            "unlocktime": row[6],
+        }
+        for row in rows
+    ]

@@ -50,6 +50,20 @@ def get_achievements():
 
     return jsonify(AchievementState.load_state())
 
+@app.route("/api/refresh-achievements", methods=["POST"])
+def refresh_achievements():
+    data = request.get_json(silent=True) or {}
+    app_id = data.get("app_id")
+
+    if not app_id:
+        app_id = get_setting("active_appid")
+
+    if not app_id:
+        return jsonify({"error": "Missing app_id"}), 400
+
+    state = AchievementService.refresh_game_achievements(app_id)
+    return jsonify(state)
+
 @app.route("/api/select-game", methods=["POST"])
 def select_game():
     data = request.get_json(silent=True) or {}

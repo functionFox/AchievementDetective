@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Adding display modes">
-      <change beforePath="$PROJECT_DIR$/flask_app/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Adding display modes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,78 +104,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Implementing icon display">
-      <option name="closed" value="true" />
-      <created>1776397285491</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1776397285491</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Implementing icon display">
-      <option name="closed" value="true" />
-      <created>1776397342923</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1776397342923</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Toast">
-      <option name="closed" value="true" />
-      <created>1776398059065</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1776398059065</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776398450606</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1776398450606</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776398545876</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1776398545876</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776398719542</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1776398719542</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776398838825</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1776398838825</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776398920816</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1776398920816</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776399035708</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1776399035708</updated>
     </task>
     <task id="LOCAL-00050" summary="Adding display modes">
       <option name="closed" value="true" />
@@ -499,7 +425,79 @@
       <option name="project" value="LOCAL" />
       <updated>1776406238876</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776406390703</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1776406390703</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776406456990</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1776406456990</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776406481923</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1776406481924</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776406575293</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1776406575293</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776406609673</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1776406609673</updated>
+    </task>
+    <task id="LOCAL-00095" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776406636525</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1776406636525</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776406674768</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1776406674768</updated>
+    </task>
+    <task id="LOCAL-00097" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776406712096</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1776406712096</updated>
+    </task>
+    <task id="LOCAL-00098" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776406726911</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1776406726911</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

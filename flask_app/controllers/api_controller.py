@@ -23,9 +23,13 @@ def get_state():
     if not active_app_id:
         return jsonify(AchievementState.load_state())
 
+    cached_state = get_achievement_state_by_app_id(str(active_app_id))
+
+    if cached_state is not None:
+        return jsonify(cached_state)
+
     state = AchievementService.refresh_game_achievements(active_app_id)
     return jsonify(state)
-
 
 @app.route("/api/event")
 def get_event():

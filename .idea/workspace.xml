@@ -105,46 +105,6 @@
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
     </task>
-    <task id="LOCAL-00028" summary="Adding configuration page">
-      <option name="closed" value="true" />
-      <created>1776395398777</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1776395398777</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Adding configuration page">
-      <option name="closed" value="true" />
-      <created>1776395509179</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1776395509179</updated>
-    </task>
-    <task id="LOCAL-00030" summary="corrections to api_controller">
-      <option name="closed" value="true" />
-      <created>1776395577882</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1776395577882</updated>
-    </task>
-    <task id="LOCAL-00031" summary="corrections to db_service">
-      <option name="closed" value="true" />
-      <created>1776395791862</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1776395791862</updated>
-    </task>
-    <task id="LOCAL-00032" summary="corrections to db_service">
-      <option name="closed" value="true" />
-      <created>1776395937090</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1776395937090</updated>
-    </task>
     <task id="LOCAL-00033" summary="corrections to api_controller">
       <option name="closed" value="true" />
       <created>1776396054637</created>
@@ -497,7 +457,47 @@
       <option name="project" value="LOCAL" />
       <updated>1776405384572</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776405418823</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1776405418823</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776405569613</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1776405569613</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776405657904</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1776405657904</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776405682389</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1776405682389</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776405720252</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1776405720252</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

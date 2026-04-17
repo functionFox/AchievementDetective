@@ -32,3 +32,16 @@ body {
     border: none;
     border-top: 1px solid rgba(0,0,0,0.2);
 }
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.achievement-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+}

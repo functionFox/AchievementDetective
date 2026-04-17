@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Implementing icon caching">
-      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Implementing icon display">
+      <change beforePath="$PROJECT_DIR$/flask_app/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -427,7 +427,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776397154308</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Implementing icon display">
+      <option name="closed" value="true" />
+      <created>1776397285491</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1776397285491</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -444,6 +452,7 @@
     <MESSAGE value="adjustments to config page" />
     <MESSAGE value="achievement service now detects changes in achievement status" />
     <MESSAGE value="Implementing icon caching" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing icon caching" />
+    <MESSAGE value="Implementing icon display" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing icon display" />
   </component>
 </project>

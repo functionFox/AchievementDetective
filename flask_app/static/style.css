@@ -116,7 +116,7 @@ body {
     align-items: flex-end;
     overflow: hidden;
     transform-origin: center bottom;
-    transform: rotateX(72deg);
+    transform: rotateX(63deg);
     transform-style: preserve-3d;
 }
 

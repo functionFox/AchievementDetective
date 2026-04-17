@@ -101,8 +101,7 @@ body {
     justify-content: center;
     align-items: flex-end;
     min-height: 420px;
-    padding-top: 180px;
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
 #list.mode-obelisk .obelisk-track {
@@ -111,7 +110,7 @@ body {
     flex-direction: column;
     gap: 10px;
     transform-origin: center bottom;
-    transform: rotateX(58deg);
+    transform: translateY(120px) rotateX(63deg);
 }
 
 #list.mode-obelisk .item {

@@ -5,20 +5,11 @@ async function fetchJson(url) {
     return await response.json();
 }
 
-async function updateOverlay() {
-    const state = await fetchJson("/api/state");
-    const event = await fetchJson("/api/event");
-
-    document.getElementById("counter").innerText = `${state.unlocked} / ${state.total}`;
-
-    const list = document.getElementById("list");
-
+function renderObelisk(state) {
     const unlocked = state.achievements.filter(a => a.achieved);
     const locked = state.achievements.filter(a => !a.achieved);
 
-    const sorted = [...unlocked, ...locked];
-
-        const html = [
+    return [
         ...unlocked.map(a => `
             <div class="item unlocked">
                 <img class="achievement-icon" src="/static/${a.icon}" alt="">
@@ -33,8 +24,31 @@ async function updateOverlay() {
             </div>
         `)
     ].join("");
+}
 
-    list.innerHTML = html;
+function renderTicker(state) {
+    return `
+        <div class="ticker-placeholder">
+            Ticker mode coming next.
+        </div>
+    `;
+}
+
+async function updateOverlay() {
+    const state = await fetchJson("/api/state");
+    const event = await fetchJson("/api/event");
+
+    document.getElementById("counter").innerText = `${state.unlocked} / ${state.total}`;
+
+        const list = document.getElementById("list");
+    const activeGame = await fetchJson("/api/active-game");
+    const displayMode = activeGame.display_mode || "obelisk";
+
+    if (displayMode === "ticker") {
+        list.innerHTML = renderTicker(state);
+    } else {
+        list.innerHTML = renderObelisk(state);
+    }
 
         if (event.timestamp > lastEventTimestamp && event.latest) {
         lastEventTimestamp = event.timestamp;

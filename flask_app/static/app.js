@@ -298,8 +298,8 @@ async function applySelectedGame() {
 }
 
 async function refreshSelectedGame() {
-    const select = document.getElementById("game-select");
-    const appId = select.value;
+    const activeGame = await loadActiveGame();
+    const appId = activeGame.active_app_id;
 
     if (!appId) {
         return;
@@ -314,7 +314,6 @@ async function refreshSelectedGame() {
     });
 
     await response.json();
-    await loadActiveGame();
     await loadAchievements(appId);
 }
 

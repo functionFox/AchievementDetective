@@ -82,6 +82,10 @@ async function loadActiveGame() {
         document.getElementById("game-select").value = data.active_app_id;
     }
 
+    if (data.display_mode) {
+        document.getElementById("display-mode-select").value = data.display_mode;
+    }
+
     return data;
 }
 
@@ -110,7 +114,9 @@ async function loadAchievements(appId) {
 
 async function applySelectedGame() {
     const select = document.getElementById("game-select");
+    const modeSelect = document.getElementById("display-mode-select");
     const appId = select.value;
+    const displayMode = modeSelect.value;
 
     if (!appId) {
         return;
@@ -121,7 +127,10 @@ async function applySelectedGame() {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ app_id: appId })
+            body: JSON.stringify({
+                app_id: appId,
+                display_mode: displayMode
+            })
     });
 
         const state = await response.json();

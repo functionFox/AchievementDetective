@@ -91,7 +91,7 @@ body {
 }
 
 #list.mode-obelisk {
-    perspective: 700px;
+    perspective: 350px;
     perspective-origin: center 100%;
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 100%);
@@ -112,7 +112,7 @@ body {
     flex-direction: column;
     gap: 10px;
     transform-origin: center bottom;
-    transform: rotateX(63deg);
+    transform: rotateX(72deg);
     animation: obelisk-scroll 16s linear infinite;
     will-change: transform;
 }

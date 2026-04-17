@@ -2,7 +2,7 @@ from flask import jsonify, request
 from flask_app import app
 from flask_app.models.achievement_state import AchievementState
 from flask_app.services.achievement_service import AchievementService
-from flask_app.services.db_service import set_setting
+from flask_app.services.db_service import set_setting, get_setting, get_game_by_app_id
 from flask_app.services.steam_service import SteamService
 
 TEST_APP_ID = 2060160  # The Farmer Was Replaced
@@ -43,3 +43,17 @@ def select_game():
     state = AchievementService.refresh_game_achievements(app_id)
 
     return jsonify(state)
+
+@app.route("/api/active-game", methods=["GET"])
+def get_active_game():
+    active_app_id = get_setting("active_appid")
+
+    if not active_app_id:
+        return jsonify({"active_app_id": None, "game": None})
+
+    game = get_game_by_app_id(str(active_app_id))
+
+    return jsonify({
+        "active_app_id": active_app_id,
+        "game": game
+    })

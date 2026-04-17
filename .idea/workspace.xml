@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Adding display modes">
-      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
-    </list>
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Adding display modes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,38 +104,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Integrating achievement service">
-      <option name="closed" value="true" />
-      <created>1776393848946</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1776393848946</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Integrating achievement service">
-      <option name="closed" value="true" />
-      <created>1776394040315</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1776394040315</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Integrating achievement service">
-      <option name="closed" value="true" />
-      <created>1776394113123</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1776394113123</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Integrating achievement service">
-      <option name="closed" value="true" />
-      <created>1776394191421</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1776394191421</updated>
     </task>
     <task id="LOCAL-00018" summary="Integrating achievement service">
       <option name="closed" value="true" />
@@ -499,7 +465,39 @@
       <option name="project" value="LOCAL" />
       <updated>1776401087398</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776401278401</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1776401278401</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776401368049</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1776401368049</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776401451352</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1776401451352</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776401692796</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1776401692796</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

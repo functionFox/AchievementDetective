@@ -47,7 +47,10 @@ body {
 }
 
 #list {
+    width: 420px;
+    height: 420px;
     overflow: hidden;
+    position: relative;
 }
 
 .ticker-track {

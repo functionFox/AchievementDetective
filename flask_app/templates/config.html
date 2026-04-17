@@ -1,10 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Achievement Detective Config</title>
 </head>
 <body>
+    <h1>Achievement Detective Config</h1>
 
+    <label for="game-select">Game</label>
+    <select id="game-select">
+        <option value="">Loading games...</option>
+    </select>
+
+    <button id="apply-game-button" type="button">Apply</button>
+
+    <h2>Active Game</h2>
+    <pre id="active-game-output">No active game selected.</pre>
+
+    <h2>Achievements</h2>
+    <pre id="achievements-output">No achievement data loaded.</pre>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

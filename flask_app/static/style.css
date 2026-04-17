@@ -3,6 +3,7 @@
   --overlay-text-color: #000000;
   --overlay-text-stroke-width: 0px;
   --overlay-text-stroke-color: #ffffff;
+  --ticker-strip-bg: rgba(20, 26, 40, 0.78);
 
   --item-gap: 8px;
   --ticker-gap: 24px;
@@ -138,6 +139,24 @@ html[data-display-mode="ticker"] body {
   to {
     transform: translateX(calc(-50% - 12px));
   }
+}
+
+#list.mode-ticker {
+  position: relative;
+  isolation: isolate;
+}
+
+#list.mode-ticker::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--ticker-strip-bg);
+  z-index: 0;
+}
+
+#list.mode-ticker .ticker-track {
+  position: relative;
+  z-index: 1;
 }
 
 /* Obelisk mode */

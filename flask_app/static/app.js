@@ -10,20 +10,22 @@ async function fetchJson(url) {
 }
 
 function applyOverlayTextSettings(settings) {
-    document.documentElement.style.setProperty(
-        "--overlay-text-color",
-        settings.text_color || "#000000"
-    );
-
-    document.documentElement.style.setProperty(
-        "--overlay-text-stroke-width",
-        `${settings.text_stroke_width || 0}px`
-    );
-
-    document.documentElement.style.setProperty(
-        "--overlay-text-stroke-color",
-        settings.text_stroke_color || "#ffffff"
-    );
+  document.documentElement.style.setProperty(
+    "--overlay-text-color",
+    settings.text_color || "#000000"
+  );
+  document.documentElement.style.setProperty(
+    "--overlay-text-stroke-width",
+    `${settings.text_stroke_width || 0}px`
+  );
+  document.documentElement.style.setProperty(
+    "--overlay-text-stroke-color",
+    settings.text_stroke_color || "#ffffff"
+  );
+  document.documentElement.style.setProperty(
+    "--ticker-strip-bg",
+    settings.ticker_strip_color || "rgba(20, 26, 40, 0.78)"
+  );
 }
 
 function commitPendingOverlayState() {
@@ -273,6 +275,8 @@ async function applySelectedGame() {
     const textColor = textColorInput.value;
     const textStrokeWidth = textStrokeWidthInput.value;
     const textStrokeColor = textStrokeColorInput.value;
+    const tickerStripColorInput = document.getElementById("ticker-strip-color-input");
+    const tickerStripColor = tickerStripColorInput.value;
 
     if (!appId) {
         return;
@@ -284,11 +288,12 @@ async function applySelectedGame() {
             "Content-Type": "application/json"
         },
             body: JSON.stringify({
-                app_id: appId,
-                display_mode: displayMode,
-                text_color: textColor,
-                text_stroke_width: textStrokeWidth,
-                text_stroke_color: textStrokeColor
+              app_id: appId,
+              display_mode: displayMode,
+              text_color: textColor,
+              text_stroke_width: textStrokeWidth,
+              text_stroke_color: textStrokeColor,
+              ticker_strip_color: tickerStripColor
             })
     });
 

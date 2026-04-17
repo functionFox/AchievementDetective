@@ -237,18 +237,6 @@ async function loadActiveGame() {
         document.getElementById("display-mode-select").value = data.display_mode;
     }
 
-    if (data.text_color) {
-        document.getElementById("text-color-input").value = data.text_color;
-    }
-
-    if (data.text_stroke_width !== undefined) {
-        document.getElementById("text-stroke-width-input").value = data.text_stroke_width;
-    }
-
-    if (data.text_stroke_color) {
-        document.getElementById("text-stroke-color-input").value = data.text_stroke_color;
-    }
-
     return data;
 }
 

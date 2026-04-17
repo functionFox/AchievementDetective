@@ -85,14 +85,20 @@ def select_game():
 @app.route("/api/active-game", methods=["GET"])
 def get_active_game():
     active_app_id = get_setting("active_appid")
+    display_mode = get_setting("display_mode") or "obelisk"
 
     if not active_app_id:
-        return jsonify({"active_app_id": None, "game": None})
+        return jsonify({
+            "active_app_id": None,
+            "display_mode": display_mode,
+            "game": None
+        })
 
     game = get_game_by_app_id(str(active_app_id))
 
     return jsonify({
         "active_app_id": active_app_id,
+        "display_mode": display_mode,
         "game": game
     })
 

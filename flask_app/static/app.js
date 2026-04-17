@@ -71,6 +71,20 @@ async function loadActiveGame() {
     }
 }
 
+async function loadAchievements(appId) {
+    if (!appId) {
+        document.getElementById("achievements-output").textContent =
+            "No achievement data loaded.";
+        return;
+    }
+
+    const response = await fetch(`/api/achievements?appid=${appId}`);
+    const state = await response.json();
+
+    document.getElementById("achievements-output").textContent =
+        JSON.stringify(state, null, 2);
+}
+
 async function applySelectedGame() {
     const select = document.getElementById("game-select");
     const appId = select.value;
@@ -101,6 +115,13 @@ async function applySelectedGame() {
 document.addEventListener("DOMContentLoaded", async () => {
     await loadGames();
     await loadActiveGame();
+
+    const activeGameOutput = document.getElementById("active-game-output");
+    const activeGameData = JSON.parse(activeGameOutput.textContent);
+
+    if (activeGameData.active_app_id) {
+        await loadAchievements(activeGameData.active_app_id);
+    }
 
     document
         .getElementById("apply-game-button")

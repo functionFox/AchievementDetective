@@ -99,9 +99,15 @@ body {
 }
 
 #list {
-  width: 100vw;
+  width: 420px;
   height: 130px;
   overflow: hidden;
+  position: relative;
+}
+
+#list.mode-ticker {
+  width: 100vw;
+  height: 130px;
   position: fixed;
   left: 0;
   bottom: 0;

@@ -45,3 +45,30 @@ body {
     object-fit: contain;
     flex-shrink: 0;
 }
+
+#list {
+    overflow: hidden;
+}
+
+.ticker-track {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    white-space: nowrap;
+}
+
+.ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.ticker-item.locked {
+    opacity: 0.5;
+}
+
+.ticker-item.unlocked {
+    opacity: 1;
+    font-weight: bold;
+}

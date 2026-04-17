@@ -144,6 +144,8 @@ html[data-display-mode="ticker"] body {
 #list.mode-ticker .ticker-track {
   position: absolute;
   top: 0%;
+  transform: translateY(-50%);
+}
 
 }
 

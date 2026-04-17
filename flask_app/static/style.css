@@ -93,17 +93,16 @@ body {
 #list.mode-obelisk {
     perspective: 700px;
     perspective-origin: center 100%;
-    overflow: hidden;
-    min-height: 420px;
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 100%);
 }
 
 #list.mode-obelisk .obelisk-crawl {
+    position: absolute;
+    inset: 0;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    min-height: 420px;
     overflow: hidden;
 }
 
@@ -113,7 +112,9 @@ body {
     flex-direction: column;
     gap: 10px;
     transform-origin: center bottom;
-    transform: translateY(120px) rotateX(63deg);
+    transform: rotateX(63deg);
+    animation: obelisk-scroll 16s linear infinite;
+    will-change: transform;
 }
 
 #list.mode-obelisk .item {
@@ -124,4 +125,13 @@ body {
 
 #list.mode-obelisk .divider {
     display: none;
+}
+
+@keyframes obelisk-scroll {
+    from {
+        transform: translateY(110%) rotateX(63deg);
+    }
+    to {
+        transform: translateY(-85%) rotateX(63deg);
+    }
 }

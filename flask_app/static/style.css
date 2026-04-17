@@ -85,10 +85,9 @@ body {
 
 #list {
     width: 420px;
-    height: 80px;
+    height: 100px;
     overflow: hidden;
     position: relative;
-    background: red;
 }
 
 #list.mode-obelisk {

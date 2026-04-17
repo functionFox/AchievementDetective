@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Ticker tape update">
-      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
-    </list>
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Ticker tape update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,30 +104,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00096" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776406674768</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1776406674768</updated>
-    </task>
-    <task id="LOCAL-00097" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776406712096</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1776406712096</updated>
-    </task>
-    <task id="LOCAL-00098" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776406726911</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1776406726911</updated>
     </task>
     <task id="LOCAL-00099" summary="Adding display modes">
       <option name="closed" value="true" />
@@ -499,7 +473,31 @@
       <option name="project" value="LOCAL" />
       <updated>1776421168704</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776421645654</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1776421645654</updated>
+    </task>
+    <task id="LOCAL-00146" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776421831545</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1776421831545</updated>
+    </task>
+    <task id="LOCAL-00147" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776421982270</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1776421982270</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

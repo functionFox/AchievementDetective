@@ -116,7 +116,7 @@ body {
     align-items: center;
     overflow: visible;
     transform-origin: center center;
-    transform: rotateX(63deg) scale(2.15);
+    transform: rotateX(63deg) scale(1.55);
     transform-style: preserve-3d;
 }
 

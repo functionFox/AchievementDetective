@@ -105,14 +105,6 @@
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
     </task>
-    <task id="LOCAL-00099" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776406815051</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1776406815051</updated>
-    </task>
     <task id="LOCAL-00100" summary="Adding display modes">
       <option name="closed" value="true" />
       <created>1776406943723</created>
@@ -497,7 +489,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776421982270</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776422265692</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1776422265692</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

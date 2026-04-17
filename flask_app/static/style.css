@@ -122,14 +122,13 @@ html[data-display-mode="ticker"] body {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-/* Ticker mode */
 .ticker-track {
   display: flex;
   align-items: center;
   gap: var(--ticker-gap);
   width: max-content;
   white-space: nowrap;
-  animation: ticker-scroll 30s linear infinite;
+  animation: ticker-scroll 60s linear infinite;
 }
 
 @keyframes ticker-scroll {

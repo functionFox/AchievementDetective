@@ -1,4 +1,6 @@
 let lastEventTimestamp = 0;
+let currentOverlayState = null;
+let pendingOverlayState = null;
 
 async function fetchJson(url) {
     const response = await fetch(url);
@@ -45,12 +47,20 @@ function renderTicker(state) {
 }
 
 async function updateOverlay() {
-    const state = await fetchJson("/api/state");
+    const latestState = await fetchJson("/api/state");
     const event = await fetchJson("/api/event");
+
+    if (!currentOverlayState) {
+        currentOverlayState = latestState;
+    } else {
+        pendingOverlayState = latestState;
+    }
+
+    const state = currentOverlayState;
 
     document.getElementById("counter").innerText = `${state.unlocked} / ${state.total}`;
 
-        const list = document.getElementById("list");
+    const list = document.getElementById("list");
     const activeGame = await fetchJson("/api/active-game");
     const displayMode = activeGame.display_mode || "obelisk";
 

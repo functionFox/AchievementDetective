@@ -39,11 +39,6 @@ async function updateOverlay() {
     }
 }
 
-if (document.getElementById("counter")) {
-    setInterval(updateOverlay, 1000);
-    updateOverlay();
-}
-
 async function loadGames() {
     const response = await fetch("/api/games");
     const games = await response.json();
@@ -138,6 +133,21 @@ async function refreshSelectedGame() {
     await response.json();
     await loadActiveGame();
     await loadAchievements(appId);
+}
+
+if (document.getElementById("counter")) {
+    updateOverlay();
+
+    setInterval(async () => {
+        await fetch("/api/refresh-achievements", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        await updateOverlay();
+    }, 5000);
 }
 
 document.addEventListener("DOMContentLoaded", async () => {

@@ -1,12 +1,12 @@
 import time
 
 from flask_app.models.achievement_state import AchievementState
+from flask_app.services.icon_service import IconService
 from flask_app.services.steam_service import SteamService
 from flask_app.services.db_service import (
     upsert_achievements,
     get_achievement_state_by_app_id,
 )
-
 
 class AchievementService:
     @staticmethod
@@ -15,6 +15,10 @@ class AchievementService:
 
         steam = SteamService()
         state = steam.build_achievement_state(appid)
+
+        for achievement in state["achievements"]:
+            achievement["icon"] = IconService.cache_icon(appid, achievement.get("icon"))
+            achievement["icon_gray"] = IconService.cache_icon(appid, achievement.get("icon_gray"))
 
         upsert_achievements(str(appid), state["achievements"])
         AchievementState.save_state(state)

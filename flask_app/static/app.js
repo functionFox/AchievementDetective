@@ -161,6 +161,7 @@ async function updateOverlay() {
             list.innerHTML = renderTicker(state);
             startTickerCycle();
         } else {
+            const durationMs = getObeliskDurationMs(state);
             list.style.setProperty("--obelisk-duration", `${durationMs}ms`);
             list.innerHTML = renderObelisk(state);
             startObeliskCycle();

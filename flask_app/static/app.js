@@ -36,11 +36,18 @@ async function updateOverlay() {
 
     list.innerHTML = html;
 
-    if (event.timestamp > lastEventTimestamp && event.latest) {
+        if (event.timestamp > lastEventTimestamp && event.latest) {
         lastEventTimestamp = event.timestamp;
 
         const latest = document.getElementById("latest");
-        latest.innerText = `Unlocked: ${event.latest.display_name}`;
+        const latestIcon = event.latest.icon || event.latest.icon_gray || "";
+
+        latest.innerHTML = `
+            <div class="item unlocked">
+                <img class="achievement-icon" src="/static/${latestIcon}" alt="">
+                <span>Unlocked: ${event.latest.display_name}</span>
+            </div>
+        `;
         latest.classList.add("show");
 
         setTimeout(() => {

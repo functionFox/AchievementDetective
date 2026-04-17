@@ -159,6 +159,7 @@ async function updateOverlay() {
     const list = document.getElementById("list");
     const activeGame = await fetchJson("/api/active-game");
     const displayMode = activeGame.display_mode || "obelisk";
+    document.documentElement.dataset.displayMode = displayMode;
 
     applyOverlayTextSettings(activeGame);
 

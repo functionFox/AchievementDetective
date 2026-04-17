@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Adjustments to ticker mode" />
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="De-jankifying style.css" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,14 +104,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00092" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776406481923</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1776406481924</updated>
     </task>
     <task id="LOCAL-00093" summary="Adding display modes">
       <option name="closed" value="true" />
@@ -497,7 +489,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776418864516</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="De-jankifying style.css">
+      <option name="closed" value="true" />
+      <created>1776419299031</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1776419299031</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -521,6 +521,7 @@
     <MESSAGE value="Added text config options" />
     <MESSAGE value="Open config.html by default first run" />
     <MESSAGE value="Adjustments to ticker mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjustments to ticker mode" />
+    <MESSAGE value="De-jankifying style.css" />
+    <option name="LAST_COMMIT_MESSAGE" value="De-jankifying style.css" />
   </component>
 </project>

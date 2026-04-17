@@ -105,16 +105,23 @@ body {
   position: relative;
 }
 
-#list.mode-ticker {
+#ticker-bar {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100vw;
   height: 130px;
-  overflow: hidden;
   display: flex;
   align-items: center;
+  gap: 24px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#ticker-bar #list {
+  flex: 1 1 auto;
+  width: auto;
+  height: 100%;
 }
 
 #list.mode-obelisk {

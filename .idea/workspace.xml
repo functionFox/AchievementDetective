@@ -105,38 +105,6 @@
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
     </task>
-    <task id="LOCAL-00085" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776405828771</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1776405828771</updated>
-    </task>
-    <task id="LOCAL-00086" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776405919980</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1776405919980</updated>
-    </task>
-    <task id="LOCAL-00087" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776406039115</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1776406039115</updated>
-    </task>
-    <task id="LOCAL-00088" summary="Adding display modes">
-      <option name="closed" value="true" />
-      <created>1776406063827</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1776406063827</updated>
-    </task>
     <task id="LOCAL-00089" summary="Adding display modes">
       <option name="closed" value="true" />
       <created>1776406238876</created>
@@ -497,7 +465,39 @@
       <option name="project" value="LOCAL" />
       <updated>1776417901811</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="Adjustments to ticker mode">
+      <option name="closed" value="true" />
+      <created>1776418033158</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1776418033158</updated>
+    </task>
+    <task id="LOCAL-00135" summary="Adjustments to ticker mode">
+      <option name="closed" value="true" />
+      <created>1776418094918</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1776418094918</updated>
+    </task>
+    <task id="LOCAL-00136" summary="Adjustments to ticker mode">
+      <option name="closed" value="true" />
+      <created>1776418164159</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1776418164159</updated>
+    </task>
+    <task id="LOCAL-00137" summary="Adjustments to ticker mode">
+      <option name="closed" value="true" />
+      <created>1776418296738</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1776418296738</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

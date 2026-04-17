@@ -7,6 +7,16 @@ async function fetchJson(url) {
     return await response.json();
 }
 
+function commitPendingOverlayState() {
+    if (pendingOverlayState) {
+        currentOverlayState = pendingOverlayState;
+        pendingOverlayState = null;
+        return true;
+    }
+
+    return false;
+}
+
 function renderObelisk(state) {
     const unlocked = state.achievements.filter(a => a.achieved);
     const locked = state.achievements.filter(a => !a.achieved);

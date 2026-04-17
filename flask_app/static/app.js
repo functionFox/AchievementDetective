@@ -338,6 +338,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const activeGameData = await loadActiveGame();
 
     if (activeGameData.active_app_id) {
+        document.getElementById("game-select").value = activeGameData.active_app_id;
         await loadAchievements(activeGameData.active_app_id);
     }
 

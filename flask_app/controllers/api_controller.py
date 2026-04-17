@@ -19,6 +19,7 @@ def get_state():
     state = AchievementService.refresh_game_achievements(active_app_id)
     return jsonify(state)
 
+
 @app.route("/api/event")
 def get_event():
     return jsonify(AchievementState.load_event())

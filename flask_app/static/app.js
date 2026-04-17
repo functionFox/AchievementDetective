@@ -253,6 +253,19 @@ async function loadActiveGame(syncControls = true) {
     if (data.display_mode) {
       document.getElementById("display-mode-select").value = data.display_mode;
     }
+    if (data.ticker_strip_color) {
+      const tickerStripColorInput = document.getElementById("ticker-strip-color-input");
+      if (tickerStripColorInput) {
+        tickerStripColorInput.value = data.ticker_strip_color;
+      }
+    }
+
+    if (data.ticker_strip_opacity !== undefined) {
+      const tickerStripOpacityInput = document.getElementById("ticker-strip-opacity-input");
+      if (tickerStripOpacityInput) {
+        tickerStripOpacityInput.value = data.ticker_strip_opacity;
+      }
+    }
   }
 
   return data;
@@ -294,7 +307,9 @@ async function applySelectedGame() {
     const textStrokeWidth = textStrokeWidthInput.value;
     const textStrokeColor = textStrokeColorInput.value;
     const tickerStripColorInput = document.getElementById("ticker-strip-color-input");
+    const tickerStripOpacityInput = document.getElementById("ticker-strip-opacity-input");
     const tickerStripColor = tickerStripColorInput ? tickerStripColorInput.value : null;
+    const tickerStripOpacity = tickerStripOpacityInput ? tickerStripOpacityInput.value : null;
 
     if (!appId) {
         return;
@@ -311,7 +326,8 @@ async function applySelectedGame() {
               text_color: textColor,
               text_stroke_width: textStrokeWidth,
               text_stroke_color: textStrokeColor,
-              ticker_strip_color: tickerStripColor
+              ticker_strip_color: tickerStripColor,
+              ticker_strip_opacity: tickerStripOpacity
             })
     });
 

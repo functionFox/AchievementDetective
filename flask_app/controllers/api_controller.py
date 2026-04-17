@@ -74,6 +74,8 @@ def select_game():
     text_color = data.get("text_color")
     text_stroke_width = data.get("text_stroke_width")
     text_stroke_color = data.get("text_stroke_color")
+    ticker_strip_color = data.get("ticker_strip_color")
+    ticker_strip_opacity = data.get("ticker_strip_opacity")
 
     if not app_id:
         return jsonify({"error": "Missing app_id"}), 400
@@ -92,6 +94,12 @@ def select_game():
     if text_stroke_color:
         set_setting("text_stroke_color", str(text_stroke_color))
 
+    if ticker_strip_color:
+        set_setting("ticker_strip_color", str(ticker_strip_color))
+
+    if ticker_strip_opacity is not None:
+        set_setting("ticker_strip_opacity", str(ticker_strip_opacity))
+
     state = AchievementService.refresh_game_achievements(app_id)
 
     return jsonify(state)
@@ -103,6 +111,8 @@ def get_active_game():
     text_color = get_setting("text_color") or "#000000"
     text_stroke_width = get_setting("text_stroke_width") or "0"
     text_stroke_color = get_setting("text_stroke_color") or "#ffffff"
+    ticker_strip_color = get_setting("ticker_strip_color") or "#141a28"
+    ticker_strip_opacity = get_setting("ticker_strip_opacity") or "78"
 
     if not active_app_id:
         return jsonify({
@@ -111,6 +121,8 @@ def get_active_game():
             "text_color": text_color,
             "text_stroke_width": text_stroke_width,
             "text_stroke_color": text_stroke_color,
+            "ticker_strip_color": ticker_strip_color,
+            "ticker_strip_opacity": ticker_strip_opacity,
             "game": None
         })
 
@@ -122,6 +134,8 @@ def get_active_game():
         "text_color": text_color,
         "text_stroke_width": text_stroke_width,
         "text_stroke_color": text_stroke_color,
+        "ticker_strip_color": ticker_strip_color,
+        "ticker_strip_opacity": ticker_strip_opacity,
         "game": game
     })
 

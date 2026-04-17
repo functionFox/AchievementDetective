@@ -99,10 +99,12 @@ body {
 }
 
 #list {
-    width: 420px;
-    height: 130px;
-    overflow: hidden;
-    position: relative;
+  width: 100vw;
+  height: 130px;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 #list.mode-obelisk {

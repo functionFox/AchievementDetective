@@ -27,9 +27,16 @@ function renderObelisk(state) {
 }
 
 function renderTicker(state) {
+    const items = state.achievements.map(a => `
+        <div class="ticker-item ${a.achieved ? "unlocked" : "locked"}">
+            <img class="achievement-icon" src="/static/${a.achieved ? a.icon : (a.icon_gray || a.icon)}" alt="">
+            <span>${a.display_name}</span>
+        </div>
+    `);
+
     return `
-        <div class="ticker-placeholder">
-            Ticker mode coming next.
+        <div class="ticker-track">
+            ${items.join("")}
         </div>
     `;
 }

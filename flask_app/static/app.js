@@ -109,6 +109,7 @@ async function applySelectedGame() {
 
     document.getElementById("achievements-output").textContent =
         JSON.stringify(state, null, 2);
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
     await loadGames();

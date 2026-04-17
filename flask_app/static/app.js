@@ -109,7 +109,7 @@ function startObeliskCycle() {
         }
 
         startObeliskCycle();
-    }, 8000);
+    }, 16000);
 }
 
 async function updateOverlay() {

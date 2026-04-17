@@ -34,9 +34,12 @@ function renderTicker(state) {
         </div>
     `);
 
+    const content = items.join("");
+
     return `
         <div class="ticker-track">
-            ${items.join("")}
+            ${content}
+            ${content}
         </div>
     `;
 }

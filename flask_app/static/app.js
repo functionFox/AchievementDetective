@@ -165,4 +165,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     document
         .getElementById("refresh-game-button")
         .addEventListener("click", refreshSelectedGame);
+
+    if (document.getElementById("game-select")) {
+        setInterval(async () => {
+            const activeGame = await loadActiveGame();
+
+            if (activeGame.active_app_id) {
+                await loadAchievements(activeGame.active_app_id);
+            }
+        }, 5000);
+    }
 });

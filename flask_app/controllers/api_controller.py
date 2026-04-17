@@ -5,16 +5,18 @@ from flask_app.services.achievement_service import AchievementService
 from flask_app.services.db_service import set_setting, get_setting, get_game_by_app_id, get_games, upsert_games
 from flask_app.services.steam_service import SteamService
 
-TEST_APP_ID = 2060160  # The Farmer Was Replaced
-
 @app.route("/api/health")
 def health():
     return jsonify({"status": "ok"})
 
 @app.route("/api/state")
 def get_state():
-    steam = SteamService()
-    state = steam.build_achievement_state(TEST_APP_ID)
+    active_app_id = get_setting("active_appid")
+
+    if not active_app_id:
+        return jsonify(AchievementState.load_state())
+
+    state = AchievementService.refresh_game_achievements(active_app_id)
     return jsonify(state)
 
 @app.route("/api/event")

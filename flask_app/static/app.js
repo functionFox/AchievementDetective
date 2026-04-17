@@ -76,6 +76,15 @@ function getObeliskDurationMs(state) {
     return baseMs + (count * perItemMs);
 }
 
+function getTickerDurationMs(state) {
+    const count = state.achievements.length;
+
+    const baseMs = 12000;
+    const perItemMs = 1800;
+
+    return baseMs + (count * perItemMs);
+}
+
 function renderTicker(state) {
     const items = state.achievements.map(a => `
         <div class="ticker-item ${a.achieved ? "unlocked" : "locked"}">
@@ -109,9 +118,11 @@ function startTickerCycle() {
             return;
         }
 
-        if (commitPendingOverlayState()) {
-            list.innerHTML = renderTicker(currentOverlayState);
-            startTickerCycle();
+            if (commitPendingOverlayState()) {
+                const nextDurationMs = getTickerDurationMs(currentOverlayState);
+                list.style.setProperty("--ticker-duration", `${nextDurationMs}ms`);
+                list.innerHTML = renderTicker(currentOverlayState);
+                startTickerCycle();
         } else {
             startTickerCycle();
         }
@@ -179,7 +190,9 @@ async function updateOverlay() {
     }
 
     if (!list.innerHTML.trim()) {
-        if (displayMode === "ticker") {
+                if (displayMode === "ticker") {
+            const durationMs = getTickerDurationMs(state);
+            list.style.setProperty("--ticker-duration", `${durationMs}ms`);
             list.innerHTML = renderTicker(state);
             startTickerCycle();
         } else {

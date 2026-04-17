@@ -128,7 +128,7 @@ html[data-display-mode="ticker"] body {
   gap: var(--ticker-gap);
   width: max-content;
   white-space: nowrap;
-  animation: ticker-scroll 60s linear infinite;
+  animation: ticker-scroll var(--ticker-duration, 30s) linear infinite;
 }
 
 @keyframes ticker-scroll {

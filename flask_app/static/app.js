@@ -74,10 +74,12 @@ async function updateOverlay() {
     const activeGame = await fetchJson("/api/active-game");
     const displayMode = activeGame.display_mode || "obelisk";
 
-    if (displayMode === "ticker") {
-        list.innerHTML = renderTicker(state);
-    } else {
-        list.innerHTML = renderObelisk(state);
+    if (!list.innerHTML.trim()) {
+        if (displayMode === "ticker") {
+            list.innerHTML = renderTicker(state);
+        } else {
+            list.innerHTML = renderObelisk(state);
+        }
     }
 
         if (event.timestamp > lastEventTimestamp && event.latest) {

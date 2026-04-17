@@ -232,8 +232,14 @@ async function loadActiveGame(syncControls = true) {
   const output = document.getElementById("active-game-output");
   output.textContent = JSON.stringify(data, null, 2);
 
-  if (syncControls && data.display_mode) {
-    document.getElementById("display-mode-select").value = data.display_mode;
+  if (syncControls) {
+    if (data.active_app_id) {
+      document.getElementById("game-select").value = data.active_app_id;
+    }
+
+    if (data.display_mode) {
+      document.getElementById("display-mode-select").value = data.display_mode;
+    }
   }
 
   return data;
@@ -340,7 +346,7 @@ if (document.getElementById("counter")) {
 
 document.addEventListener("DOMContentLoaded", async () => {
     await loadGames();
-    const activeGameData = await loadActiveGame();
+    const activeGame = await loadActiveGame(false);
 
     if (activeGameData.active_app_id) {
         document.getElementById("game-select").value = activeGameData.active_app_id;

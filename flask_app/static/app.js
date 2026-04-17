@@ -52,7 +52,7 @@ function getObeliskDurationMs(state) {
     const count = state.achievements.length;
 
     const baseMs = 8000;
-    const perItemMs = 900;
+    const perItemMs = 650;
 
     return baseMs + (count * perItemMs);
 }

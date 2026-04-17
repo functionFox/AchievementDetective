@@ -56,6 +56,22 @@ function renderTicker(state) {
     `;
 }
 
+function startTickerCycle() {
+    const list = document.getElementById("list");
+    const track = list.querySelector(".ticker-track");
+
+    if (!track) {
+        return;
+    }
+
+    track.addEventListener("animationiteration", () => {
+        if (commitPendingOverlayState()) {
+            list.innerHTML = renderTicker(currentOverlayState);
+            startTickerCycle();
+        }
+    }, { once: true });
+}
+
 async function updateOverlay() {
     const latestState = await fetchJson("/api/state");
     const event = await fetchJson("/api/event");
@@ -74,9 +90,10 @@ async function updateOverlay() {
     const activeGame = await fetchJson("/api/active-game");
     const displayMode = activeGame.display_mode || "obelisk";
 
-    if (!list.innerHTML.trim()) {
+        if (!list.innerHTML.trim()) {
         if (displayMode === "ticker") {
             list.innerHTML = renderTicker(state);
+            startTickerCycle();
         } else {
             list.innerHTML = renderObelisk(state);
         }

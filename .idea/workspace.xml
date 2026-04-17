@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Adding display modes" />
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Adding display modes">
+      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,30 +106,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Environmental Variables instituted.">
-      <option name="closed" value="true" />
-      <created>1774926374727</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1774926374727</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Improved ordering/visibility of web-generated list">
-      <option name="closed" value="true" />
-      <created>1774927416897</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1774927416897</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Implementing Library scan service">
-      <option name="closed" value="true" />
-      <created>1776133393782</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1776133393782</updated>
     </task>
     <task id="LOCAL-00008" summary="Implementing Library scan service">
       <option name="closed" value="true" />
@@ -497,7 +475,31 @@
       <option name="project" value="LOCAL" />
       <updated>1776399278790</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776399613714</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1776399613714</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776399669475</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1776399669475</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Adding display modes">
+      <option name="closed" value="true" />
+      <created>1776399768603</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1776399768603</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

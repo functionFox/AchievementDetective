@@ -166,3 +166,13 @@ body {
 .ticker-item.locked {
     border-color: rgba(180, 180, 180, 0.18);
 }
+
+#latest {
+    display: inline-block;
+}
+
+#latest .item {
+    width: auto;
+    max-width: 420px;
+    display: inline-flex;
+}

@@ -143,6 +143,8 @@ html[data-display-mode="ticker"] body {
 #list.mode-ticker {
   position: relative;
   isolation: isolate;
+  display: flex;
+  align-items: center;
 }
 
 #list.mode-ticker::before {

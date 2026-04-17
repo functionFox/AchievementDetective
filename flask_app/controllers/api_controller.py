@@ -2,7 +2,14 @@ from flask import jsonify, request
 from flask_app import app
 from flask_app.models.achievement_state import AchievementState
 from flask_app.services.achievement_service import AchievementService
-from flask_app.services.db_service import set_setting, get_setting, get_game_by_app_id, get_games, upsert_games
+from flask_app.services.db_service import (
+    set_setting,
+    get_setting,
+    get_game_by_app_id,
+    get_games,
+    upsert_games,
+    get_achievement_state_by_app_id
+)
 from flask_app.services.steam_service import SteamService
 
 @app.route("/api/health")
@@ -29,6 +36,11 @@ def get_achievements():
     appid = request.args.get("appid", type=int)
 
     if appid:
+        cached_state = get_achievement_state_by_app_id(str(appid))
+
+        if cached_state is not None:
+            return jsonify(cached_state)
+
         state = AchievementService.refresh_game_achievements(appid)
         return jsonify(state)
 

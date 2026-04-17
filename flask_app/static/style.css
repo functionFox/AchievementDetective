@@ -72,3 +72,16 @@ body {
     opacity: 1;
     font-weight: bold;
 }
+
+@keyframes ticker-scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.ticker-track {
+    animation: ticker-scroll 30s linear infinite;
+}

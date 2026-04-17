@@ -22,9 +22,22 @@ function applyOverlayTextSettings(settings) {
     "--overlay-text-stroke-color",
     settings.text_stroke_color || "#ffffff"
   );
+
+  const tickerColor = settings.ticker_strip_color || "#141a28";
+  const tickerOpacity = Number(settings.ticker_strip_opacity ?? 78) / 100;
+
+  const hex = tickerColor.replace("#", "");
+  const normalized = hex.length === 3
+    ? hex.split("").map(ch => ch + ch).join("")
+    : hex;
+
+  const r = parseInt(normalized.slice(0, 2), 16);
+  const g = parseInt(normalized.slice(2, 4), 16);
+  const b = parseInt(normalized.slice(4, 6), 16);
+
   document.documentElement.style.setProperty(
     "--ticker-strip-bg",
-    settings.ticker_strip_color || "rgba(20, 26, 40, 0.78)"
+    `rgba(${r}, ${g}, ${b}, ${tickerOpacity})`
   );
 }
 
@@ -190,7 +203,7 @@ async function updateOverlay() {
     }
 
     if (!list.innerHTML.trim()) {
-                if (displayMode === "ticker") {
+        if (displayMode === "ticker") {
             const durationMs = getTickerDurationMs(state);
             list.style.setProperty("--ticker-duration", `${durationMs}ms`);
             list.innerHTML = renderTicker(state);

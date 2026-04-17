@@ -75,13 +75,14 @@ body {
 
 @keyframes ticker-scroll {
     from {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(calc(-50% - 12px));
     }
 }
 
 .ticker-track {
+    width: max-content;
     animation: ticker-scroll 30s linear infinite;
 }

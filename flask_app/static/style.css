@@ -139,12 +139,12 @@ html[data-display-mode="ticker"] body {
   padding: 20px 26px;
   border-radius: 18px;
   background:
-    linear-gradient(
-      135deg,
-      rgba(95, 72, 128, 0.98),
-      rgba(54, 42, 76, 0.98) 45%,
-      rgba(28, 32, 44, 0.98)
-    );
+  linear-gradient(
+    135deg,
+    rgba(120, 95, 155, 0.98),
+    rgba(76, 56, 104, 0.98) 45%,
+    rgba(38, 42, 58, 0.98)
+  );
   border: 1px solid rgba(255, 255, 255, 0.28);
   box-shadow:
     0 10px 28px rgba(0, 0, 0, 0.55),

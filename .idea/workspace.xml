@@ -105,46 +105,6 @@
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
     </task>
-    <task id="LOCAL-00128" summary="Added text config options">
-      <option name="closed" value="true" />
-      <created>1776410886373</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1776410886373</updated>
-    </task>
-    <task id="LOCAL-00129" summary="Added text config options">
-      <option name="closed" value="true" />
-      <created>1776411603965</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1776411603965</updated>
-    </task>
-    <task id="LOCAL-00130" summary="Added text config options">
-      <option name="closed" value="true" />
-      <created>1776411796400</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1776411796400</updated>
-    </task>
-    <task id="LOCAL-00131" summary="Added text config options">
-      <option name="closed" value="true" />
-      <created>1776412050462</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1776412050462</updated>
-    </task>
-    <task id="LOCAL-00132" summary="Open config.html by default first run">
-      <option name="closed" value="true" />
-      <created>1776412644736</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1776412644736</updated>
-    </task>
     <task id="LOCAL-00133" summary="Adjustments to ticker mode">
       <option name="closed" value="true" />
       <created>1776417901811</created>
@@ -497,7 +457,47 @@
       <option name="project" value="LOCAL" />
       <updated>1776477485900</updated>
     </task>
-    <option name="localTasksCounter" value="177" />
+    <task id="LOCAL-00177" summary="Buttering toast">
+      <option name="closed" value="true" />
+      <created>1776477619182</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1776477619182</updated>
+    </task>
+    <task id="LOCAL-00178" summary="Buttering toast">
+      <option name="closed" value="true" />
+      <created>1776477669381</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1776477669381</updated>
+    </task>
+    <task id="LOCAL-00179" summary="Buttering toast">
+      <option name="closed" value="true" />
+      <created>1776477736873</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1776477736873</updated>
+    </task>
+    <task id="LOCAL-00180" summary="Buttering toast">
+      <option name="closed" value="true" />
+      <created>1776477833669</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1776477833669</updated>
+    </task>
+    <task id="LOCAL-00181" summary="Buttering toast">
+      <option name="closed" value="true" />
+      <created>1776477883657</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1776477883657</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -105,14 +105,6 @@
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
     </task>
-    <task id="LOCAL-00127" summary="Added text config options">
-      <option name="closed" value="true" />
-      <created>1776410741373</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1776410741373</updated>
-    </task>
     <task id="LOCAL-00128" summary="Added text config options">
       <option name="closed" value="true" />
       <created>1776410886373</created>
@@ -497,7 +489,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776477247050</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="Buttering toast">
+      <option name="closed" value="true" />
+      <created>1776477485900</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1776477485900</updated>
+    </task>
+    <option name="localTasksCounter" value="177" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

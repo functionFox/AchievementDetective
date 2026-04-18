@@ -93,11 +93,11 @@ html[data-display-mode="ticker"] body {
 #latest {
   position: fixed;
   left: 50%;
-  top: 50%;
+  bottom: calc(var(--overlay-height) + 24px);
   z-index: 50;
   opacity: 0;
   pointer-events: none;
-  transform: translate(-50%, -50%) scale(0.92);
+  transform: translateX(-50%) scale(0.92);
   transition:
     opacity 0.25s ease,
     transform 0.25s ease;
@@ -105,7 +105,15 @@ html[data-display-mode="ticker"] body {
 
 #latest.show {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translateX(-50%) scale(1);
+}
+
+#ticker-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: var(--overlay-height);
 }
 
 .achievement-toast {
@@ -152,12 +160,6 @@ html[data-display-mode="ticker"] body {
   opacity: 0.92;
 }
 
-#latest .item {
-  width: auto;
-  max-width: 420px;
-  display: inline-flex;
-}
-
 /* Generic list container
    Important: this fills the browser source width instead of being boxed at 420px */
 #list {
@@ -177,7 +179,7 @@ html[data-display-mode="ticker"] body {
 .ticker-viewport {
   position: relative;
   width: 100%;
-  height: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
   overflow: hidden;

@@ -99,7 +99,7 @@ html[data-display-mode="ticker"] body {
   pointer-events: none;
   transform: translateX(-50%) scale(0.92);
   transition:
-    opacity 0.25s ease,
+    opacity 0.75s ease,
     transform 0.25s ease;
 }
 
@@ -209,7 +209,7 @@ html[data-display-mode="ticker"] body {
 }
 
 #latest.toast-anim-jump.show .achievement-toast::before {
-  animation: toast-shine-sweep 850ms ease-out 220ms forwards;
+  animation: toast-shine-sweep 850ms ease-out 220ms both;
 }
 
 @keyframes toast-jump-in {

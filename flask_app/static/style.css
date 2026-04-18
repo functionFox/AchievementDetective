@@ -116,6 +116,18 @@ html[data-display-mode="ticker"] body {
   height: var(--overlay-height);
 }
 
+#counter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+#ticker-bar #list {
+  position: absolute;
+  inset: 0;
+}
+
 .achievement-toast {
   min-width: 520px;
   max-width: 720px;

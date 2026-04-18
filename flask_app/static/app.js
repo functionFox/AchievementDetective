@@ -240,10 +240,12 @@ async function updateOverlay() {
                     </div>
                 </div>
                `;
-        latest.classList.add("show");
+        latest.classList.remove("toast-anim-jump");
+        void latest.offsetWidth;
+        latest.classList.add("show", "toast-anim-jump");
 
         setTimeout(() => {
-            latest.classList.remove("show");
+            latest.classList.remove("show", "toast-anim-jump");
         }, 3000);
     }
 }

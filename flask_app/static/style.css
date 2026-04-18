@@ -91,13 +91,65 @@ html[data-display-mode="ticker"] body {
 
 /* Latest unlock toast */
 #latest {
-  display: inline-block;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 50;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.92);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 #latest.show {
   opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.achievement-toast {
+  min-width: 520px;
+  max-width: 720px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 26px;
+  border-radius: 18px;
+  background: var(--panel-bg);
+  border: var(--panel-border);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+  backdrop-filter: var(--panel-blur);
+  -webkit-backdrop-filter: var(--panel-blur);
+}
+
+.achievement-toast-icon {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px;
+}
+
+.achievement-toast-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.achievement-toast-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.achievement-toast-description {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+  opacity: 0.92;
 }
 
 #latest .item {

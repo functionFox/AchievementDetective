@@ -223,13 +223,23 @@ async function updateOverlay() {
 
         const latest = document.getElementById("latest");
         const latestIcon = event.latest.icon || event.latest.icon_gray || "";
+        const latestDescription = event.latest.description || "";
 
         latest.innerHTML = `
-            <div class="item unlocked">
-                <img class="achievement-icon" src="/static/${latestIcon}" alt="">
-                <span>Unlocked: ${event.latest.display_name}</span>
-            </div>
-        `;
+            <div class="achievement-toast unlocked">
+            <img class="achievement-toast-icon" src="/static/${latestIcon}" alt="">
+                <div class="achievement-toast-text">
+                    <div class="achievement-toast-title">
+                        Unlocked: ${event.latest.display_name}
+                    </div>
+                    ${latestDescription ? `
+                        <div class="achievement-toast-description">
+                            ${latestDescription}
+                        </div>
+                    ` : ""}
+                    </div>
+                </div>
+               `;
         latest.classList.add("show");
 
         setTimeout(() => {

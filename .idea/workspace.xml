@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Ticker tape update" />
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Ticker tape update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,14 +106,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00124" summary="Tuning Obelisk mode">
-      <option name="closed" value="true" />
-      <created>1776409652857</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1776409652857</updated>
     </task>
     <task id="LOCAL-00125" summary="Tuning Obelisk mode">
       <option name="closed" value="true" />
@@ -497,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776424681326</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="Ticker tape update">
+      <option name="closed" value="true" />
+      <created>1776424767599</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1776424767599</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

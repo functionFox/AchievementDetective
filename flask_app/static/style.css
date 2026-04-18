@@ -239,7 +239,7 @@ html[data-display-mode="ticker"] body {
   }
 
   100% {
-    transform: translateX(140%) skewX(-18deg);
+    transform: translateX(340%) skewX(-18deg);
   }
 }
 

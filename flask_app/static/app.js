@@ -245,7 +245,11 @@ async function updateOverlay() {
         latest.classList.add("show", "toast-anim-jump");
 
         setTimeout(() => {
-            latest.classList.remove("show", "toast-anim-jump");
+            latest.classList.remove("show");
+
+            setTimeout(() => {
+                latest.classList.remove("toast-anim-jump");
+            }, 300);
         }, 3000);
     }
 }

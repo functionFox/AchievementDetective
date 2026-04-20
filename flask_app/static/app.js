@@ -269,6 +269,32 @@ async function loadGames() {
     }
 }
 
+async function rescanGames() {
+    const button = document.getElementById("rescan-games-button");
+    const select = document.getElementById("game-select");
+    const previousValue = select.value;
+
+    button.disabled = true;
+    button.textContent = "Rescanning...";
+
+    const response = await fetch("/api/rescan-games", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
+
+    await response.json();
+    await loadGames();
+
+    if (previousValue) {
+        select.value = previousValue;
+    }
+
+    button.disabled = false;
+    button.textContent = "Rescan Steam Games";
+}
+
 async function loadActiveGame(syncControls = true) {
   const response = await fetch("/api/active-game");
   const data = await response.json();
@@ -420,6 +446,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     document
         .getElementById("refresh-game-button")
         .addEventListener("click", refreshSelectedGame);
+
+    document
+        .getElementById("rescan-games-button")
+        .addEventListener("click", rescanGames);
 
     if (document.getElementById("game-select")) {
         setInterval(async () => {

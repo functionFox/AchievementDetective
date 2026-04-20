@@ -78,6 +78,51 @@ def upsert_games(games: list[dict[str, str]]) -> None:
 
         conn.commit()
 
+def sync_installed_games(games: list[dict[str, str]]) -> None:
+    now = int(time.time())
+    installed_app_ids = {game["app_id"] for game in games}
+
+    with get_connection() as conn:
+        cursor = conn.cursor()
+
+        if installed_app_ids:
+            placeholders = ",".join("?" for _ in installed_app_ids)
+            cursor.execute(
+                f"DELETE FROM games WHERE app_id NOT IN ({placeholders})",
+                tuple(installed_app_ids)
+            )
+        else:
+            cursor.execute("DELETE FROM games")
+
+        for game in games:
+            cursor.execute("""
+                INSERT INTO games (app_id, name, created_at, updated_at, last_seen)
+                VALUES (?, ?, ?, ?, ?)
+                ON CONFLICT(app_id) DO UPDATE SET
+                    name = excluded.name,
+                    updated_at = CASE
+                        WHEN games.name != excluded.name THEN excluded.updated_at
+                        ELSE games.updated_at
+                    END,
+                    last_seen = excluded.last_seen
+            """, (
+                game["app_id"],
+                game["name"],
+                now,
+                now,
+                now,
+            ))
+
+        conn.commit()
+
+def replace_games(games: list[dict[str, str]]) -> None:
+    with get_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM games")
+        conn.commit()
+
+    upsert_games(games)
+
 def get_games() -> list[dict[str, str]]:
     with get_connection() as conn:
         cursor = conn.cursor()

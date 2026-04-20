@@ -10,5 +10,5 @@ def open_config_page():
 
 
 if __name__ == "__main__":
-    Timer(1.0, open_config_page).start()
+    # Timer(1.0, open_config_page).start()
     app.run(debug=True)

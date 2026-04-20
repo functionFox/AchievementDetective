@@ -10,8 +10,10 @@ from flask_app.services.db_service import (
     get_game_by_app_id,
     get_games,
     upsert_games,
-    get_achievement_state_by_app_id
+    get_achievement_state_by_app_id,
+    sync_installed_games
 )
+from flask_app.services.library_service import scan_steam_games
 from flask_app.services.steam_service import SteamService
 
 @app.route("/api/health")
@@ -178,6 +180,8 @@ def rescan_games_route():
     ]
 
     upsert_games(normalized_games)
+    games = scan_steam_games()
+    sync_installed_games(games)
     games = get_games()
 
     return jsonify({

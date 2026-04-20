@@ -162,6 +162,30 @@ def get_games_route():
 
     return jsonify(games)
 
+@app.route("/api/rescan-games", methods=["POST"])
+def rescan_games_route():
+    steam = SteamService()
+    owned = steam.get_owned_games()
+    raw_games = owned.get("response", {}).get("games", [])
+
+    normalized_games = [
+        {
+            "app_id": str(game["appid"]),
+            "name": game["name"],
+        }
+        for game in raw_games
+        if game.get("appid") is not None and game.get("name")
+    ]
+
+    upsert_games(normalized_games)
+    games = get_games()
+
+    return jsonify({
+        "ok": True,
+        "count": len(games),
+        "games": games
+    })
+
 @app.route("/api/test-toast", methods=["POST"])
 def test_toast():
     data = request.get_json(silent=True) or {}

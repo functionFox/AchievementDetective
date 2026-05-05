@@ -174,8 +174,20 @@ async function updateOverlay() {
     const latestState = await fetchJson("/api/state");
     const event = await fetchJson("/api/event");
 
-    if (!currentOverlayState) {
+    const isNewGame =
+    currentOverlayState &&
+    String(currentOverlayState.appid) !== String(latestState.appid);
+
+    if (!currentOverlayState || isNewGame) {
         currentOverlayState = latestState;
+        pendingOverlayState = null;
+
+        const list = document.getElementById("list");
+        if (list) {
+            list.innerHTML = "";
+        }
+
+        overlayCycleMode = null;
     } else {
         pendingOverlayState = latestState;
     }
@@ -431,7 +443,7 @@ if (document.getElementById("counter")) {
         }
 
         await updateOverlay();
-    }, 5000);
+    }, 1000);
 }
 
 document.addEventListener("DOMContentLoaded", async () => {

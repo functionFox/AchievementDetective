@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="optimized initial game scan/game rescan; scan time reduced significantly">
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="fixed random toast issues">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/services/achievement_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/services/achievement_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +107,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00153" summary="Ticker tape update">
-      <option name="closed" value="true" />
-      <created>1776423521305</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1776423521305</updated>
     </task>
     <task id="LOCAL-00154" summary="Ticker tape update">
       <option name="closed" value="true" />
@@ -501,11 +492,18 @@
       <option name="project" value="LOCAL" />
       <updated>1778020361022</updated>
     </task>
-    <option name="localTasksCounter" value="202" />
+    <task id="LOCAL-00202" summary="fixed random toast issues">
+      <option name="closed" value="true" />
+      <created>1778021109635</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1778021109635</updated>
+    </task>
+    <option name="localTasksCounter" value="203" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="database implementation" />
     <MESSAGE value="Integrating achievement service" />
     <MESSAGE value="Adding configuration page" />
     <MESSAGE value="corrections to db_service" />
@@ -530,6 +528,7 @@
     <MESSAGE value="filter out games with no achievement schema" />
     <MESSAGE value="fixed startup game sync to check if games have no achievement schema" />
     <MESSAGE value="optimized initial game scan/game rescan; scan time reduced significantly" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimized initial game scan/game rescan; scan time reduced significantly" />
+    <MESSAGE value="fixed random toast issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed random toast issues" />
   </component>
 </project>

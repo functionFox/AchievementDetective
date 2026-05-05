@@ -1,5 +1,6 @@
 import os
 import requests
+from concurrent.futures import ThreadPoolExecutor
 
 API_BASE = "https://api.steampowered.com/ISteamUserStats"
 API_BASE_PLAYER = "https://api.steampowered.com/IPlayerService"
@@ -14,6 +15,19 @@ class SteamService:
             raise ValueError("Missing Steam API key.")
         if not self.steamid:
             raise ValueError("Missing SteamID64.")
+
+    def filter_games_with_achievements(self, games, max_workers=8):
+        def has_achievements(game):
+            return self.game_has_achievements(game["app_id"])
+
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            results = executor.map(has_achievements, games)
+
+        return [
+            game
+            for game, has_achievements in zip(games, results)
+            if has_achievements
+        ]
 
     def get_schema_for_game(self, appid, language="english"):
         url = f"{API_BASE}/GetSchemaForGame/v2/"

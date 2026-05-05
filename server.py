@@ -19,11 +19,7 @@ if __name__ == "__main__":
     steam = SteamService()
     installed_games = scan_steam_games()
 
-    games_with_achievements = [
-        game
-        for game in installed_games
-        if steam.game_has_achievements(game["app_id"])
-    ]
+    games_with_achievements = steam.filter_games_with_achievements(installed_games)
 
     sync_installed_games(games_with_achievements)
     # Timer(1.0, open_config_page).start()

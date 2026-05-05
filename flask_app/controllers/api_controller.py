@@ -37,7 +37,16 @@ def get_state():
 
 @app.route("/api/event")
 def get_event():
-    return jsonify(AchievementState.load_event())
+    active_app_id = get_setting("active_appid")
+    event = AchievementState.load_event()
+
+    if not active_app_id:
+        return jsonify({})
+
+    if str(event.get("appid")) != str(active_app_id):
+        return jsonify({})
+
+    return jsonify(event)
 
 @app.route("/api/achievements", methods=["GET"])
 def get_achievements():
@@ -208,6 +217,7 @@ def test_toast():
     }
 
     AchievementState.save_event({
+        "appid": str(data.get("appid")),
         "latest": fake_achievement,
         "timestamp": int(time.time())
     })

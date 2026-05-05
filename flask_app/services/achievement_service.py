@@ -39,6 +39,7 @@ class AchievementService:
 
             if newly_unlocked:
                 AchievementState.save_event({
+                    "appid": str(appid),
                     "latest": newly_unlocked[-1],
                     "timestamp": int(time.time())
                 })

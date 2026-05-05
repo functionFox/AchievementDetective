@@ -328,6 +328,27 @@ async function loadActiveGame(syncControls = true) {
     if (data.display_mode) {
       document.getElementById("display-mode-select").value = data.display_mode;
     }
+        if (data.text_color) {
+      const textColorInput = document.getElementById("text-color-input");
+      if (textColorInput) {
+        textColorInput.value = data.text_color;
+      }
+    }
+
+    if (data.text_stroke_width !== undefined) {
+      const textStrokeWidthInput = document.getElementById("text-stroke-width-input");
+      if (textStrokeWidthInput) {
+        textStrokeWidthInput.value = data.text_stroke_width;
+      }
+    }
+
+    if (data.text_stroke_color) {
+      const textStrokeColorInput = document.getElementById("text-stroke-color-input");
+      if (textStrokeColorInput) {
+        textStrokeColorInput.value = data.text_stroke_color;
+      }
+    }
+
     if (data.ticker_strip_color) {
       const tickerStripColorInput = document.getElementById("ticker-strip-color-input");
       if (tickerStripColorInput) {
@@ -454,7 +475,7 @@ if (document.getElementById("counter")) {
 
 document.addEventListener("DOMContentLoaded", async () => {
     await loadGames();
-    const activeGame = await loadActiveGame(false);
+    const activeGame = await loadActiveGame(true);
 
     if (activeGame.active_app_id) {
         document.getElementById("game-select").value = activeGame.active_app_id;

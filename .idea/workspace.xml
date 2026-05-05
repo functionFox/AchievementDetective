@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="fixed random toast issues">
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="optimized game switching time on overlay">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,14 +108,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00154" summary="Ticker tape update">
-      <option name="closed" value="true" />
-      <created>1776423769378</created>
-      <option name="number" value="00154" />
-      <option name="presentableId" value="LOCAL-00154" />
-      <option name="project" value="LOCAL" />
-      <updated>1776423769378</updated>
     </task>
     <task id="LOCAL-00155" summary="Ticker tape update">
       <option name="closed" value="true" />
@@ -500,11 +493,18 @@
       <option name="project" value="LOCAL" />
       <updated>1778021109635</updated>
     </task>
-    <option name="localTasksCounter" value="203" />
+    <task id="LOCAL-00203" summary="optimized game switching time on overlay">
+      <option name="closed" value="true" />
+      <created>1778021796993</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1778021796993</updated>
+    </task>
+    <option name="localTasksCounter" value="204" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Integrating achievement service" />
     <MESSAGE value="Adding configuration page" />
     <MESSAGE value="corrections to db_service" />
     <MESSAGE value="corrections to api_controller" />
@@ -529,6 +529,7 @@
     <MESSAGE value="fixed startup game sync to check if games have no achievement schema" />
     <MESSAGE value="optimized initial game scan/game rescan; scan time reduced significantly" />
     <MESSAGE value="fixed random toast issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed random toast issues" />
+    <MESSAGE value="optimized game switching time on overlay" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimized game switching time on overlay" />
   </component>
 </project>

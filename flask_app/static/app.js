@@ -1,4 +1,5 @@
 let lastEventTimestamp = 0;
+let hasInitializedEventTimestamp = false;
 let currentOverlayState = null;
 let pendingOverlayState = null;
 let overlayCycleMode = null;
@@ -229,6 +230,11 @@ async function updateOverlay() {
             startObeliskCycle();
         }
     }
+
+        if (!hasInitializedEventTimestamp) {
+            lastEventTimestamp = event.timestamp || 0;
+            hasInitializedEventTimestamp = true;
+        }
 
         if (event.timestamp > lastEventTimestamp && event.latest) {
         lastEventTimestamp = event.timestamp;

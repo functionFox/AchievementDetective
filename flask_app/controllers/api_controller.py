@@ -216,10 +216,25 @@ def test_toast():
         "unlocktime": 0,
     }
 
+    test_appid = str(data.get("appid"))
+    test_apiname = fake_achievement["apiname"]
+    test_toast_key = f"test_toast:{test_appid}:{test_apiname}"
+
+    if get_setting(test_toast_key):
+        return jsonify({
+            "ok": False,
+            "skipped": True,
+            "reason": "Test toast already triggered for this appid/apiname.",
+            "appid": test_appid,
+            "apiname": test_apiname,
+        })
+
     AchievementState.save_event({
         "appid": str(data.get("appid")),
         "latest": fake_achievement,
         "timestamp": int(time.time())
     })
+
+    set_setting(test_toast_key, "1")
 
     return jsonify({"ok": True, "latest": fake_achievement})

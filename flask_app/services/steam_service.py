@@ -26,6 +26,21 @@ class SteamService:
         response.raise_for_status()
         return response.json()
 
+    def game_has_achievements(self, appid) -> bool:
+        try:
+            schema = self.get_schema_for_game(appid)
+        except requests.RequestException:
+            return False
+
+        achievements = (
+            schema
+            .get("game", {})
+            .get("availableGameStats", {})
+            .get("achievements", [])
+        )
+
+        return bool(achievements)
+
     def get_player_achievements(self, appid, language="english"):
         url = f"{API_BASE}/GetPlayerAchievements/v1/"
         params = {

@@ -419,12 +419,16 @@ if (document.getElementById("counter")) {
     updateOverlay();
 
     setInterval(async () => {
-        await fetch("/api/refresh-achievements", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
+        const activeGame = await fetchJson("/api/active-game");
+
+        if (activeGame.active_app_id) {
+            await fetch("/api/refresh-achievements", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+        }
 
         await updateOverlay();
     }, 5000);

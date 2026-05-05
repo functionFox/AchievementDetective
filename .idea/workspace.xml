@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Adding manual game rescan">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="fixed double toast bug">
       <change beforePath="$PROJECT_DIR$/flask_app/services/achievement_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/services/achievement_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/services/db_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/services/db_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,22 +106,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00145" summary="Ticker tape update">
-      <option name="closed" value="true" />
-      <created>1776421645654</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1776421645654</updated>
-    </task>
-    <task id="LOCAL-00146" summary="Ticker tape update">
-      <option name="closed" value="true" />
-      <created>1776421831545</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1776421831545</updated>
     </task>
     <task id="LOCAL-00147" summary="Ticker tape update">
       <option name="closed" value="true" />
@@ -501,7 +483,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776648174775</updated>
     </task>
-    <option name="localTasksCounter" value="194" />
+    <task id="LOCAL-00194" summary="fixed double toast bug">
+      <option name="closed" value="true" />
+      <created>1778017089282</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1778017089282</updated>
+    </task>
+    <task id="LOCAL-00195" summary="fixed double toast bug">
+      <option name="closed" value="true" />
+      <created>1778017144926</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1778017144926</updated>
+    </task>
+    <option name="localTasksCounter" value="196" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -529,6 +527,7 @@
     <MESSAGE value="Ticker tape update" />
     <MESSAGE value="Buttering toast" />
     <MESSAGE value="Adding manual game rescan" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding manual game rescan" />
+    <MESSAGE value="fixed double toast bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed double toast bug" />
   </component>
 </project>

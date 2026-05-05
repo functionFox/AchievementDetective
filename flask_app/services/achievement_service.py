@@ -43,6 +43,7 @@ class AchievementService:
                     "timestamp": int(time.time())
                 })
 
-                mark_achievement_toasted(str(appid), newly_unlocked[-1]["apiname"])
+                for achievement in newly_unlocked:
+                    mark_achievement_toasted(str(appid), achievement["apiname"])
 
         return state

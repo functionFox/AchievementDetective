@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="fixed last toast issued replaying on refresh">
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="fixed config page showing incorrect values on initial page load/reopen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/templates/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/config.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,14 +107,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00156" summary="Ticker tape update">
-      <option name="closed" value="true" />
-      <created>1776423925482</created>
-      <option name="number" value="00156" />
-      <option name="presentableId" value="LOCAL-00156" />
-      <option name="project" value="LOCAL" />
-      <updated>1776423925482</updated>
     </task>
     <task id="LOCAL-00157" summary="Ticker tape update">
       <option name="closed" value="true" />
@@ -500,11 +492,18 @@
       <option name="project" value="LOCAL" />
       <updated>1778022520243</updated>
     </task>
-    <option name="localTasksCounter" value="205" />
+    <task id="LOCAL-00205" summary="fixed config page showing incorrect values on initial page load/reopen">
+      <option name="closed" value="true" />
+      <created>1778023640613</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1778023640614</updated>
+    </task>
+    <option name="localTasksCounter" value="206" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="corrections to db_service" />
     <MESSAGE value="corrections to api_controller" />
     <MESSAGE value="adjustments to config page" />
     <MESSAGE value="achievement service now detects changes in achievement status" />
@@ -529,6 +528,7 @@
     <MESSAGE value="fixed random toast issues" />
     <MESSAGE value="optimized game switching time on overlay" />
     <MESSAGE value="fixed last toast issued replaying on refresh" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed last toast issued replaying on refresh" />
+    <MESSAGE value="fixed config page showing incorrect values on initial page load/reopen" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed config page showing incorrect values on initial page load/reopen" />
   </component>
 </project>

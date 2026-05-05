@@ -6,6 +6,7 @@ from flask_app.services.steam_service import SteamService
 from flask_app.services.db_service import (
     upsert_achievements,
     get_achievement_state_by_app_id,
+    mark_achievement_toasted
 )
 
 class AchievementService:
@@ -33,7 +34,7 @@ class AchievementService:
                 achievement
                 for achievement in state["achievements"]
                 if achievement["achieved"]
-                and not old_lookup.get(achievement["apiname"], {}).get("achieved", 0)
+                and not old_lookup.get(achievement["apiname"], {}).get("toasted", 0)
             ]
 
             if newly_unlocked:
@@ -41,5 +42,7 @@ class AchievementService:
                     "latest": newly_unlocked[-1],
                     "timestamp": int(time.time())
                 })
+
+            mark_achievement_toasted(str(appid), newly_unlocked[-1]["apiname"])
 
         return state

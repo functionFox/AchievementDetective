@@ -43,6 +43,7 @@ def init_db() -> None:
                 icon_gray TEXT,
                 achieved INTEGER NOT NULL,
                 unlocktime INTEGER NOT NULL,
+                toasted INTEGER NOT NULL DEFAULT 0,
                 created_at INTEGER NOT NULL,
                 updated_at INTEGER NOT NULL,
                 PRIMARY KEY (app_id, api_name)
@@ -248,7 +249,8 @@ def get_achievements_by_app_id(app_id: str) -> list[dict]:
                 icon,
                 icon_gray,
                 achieved,
-                unlocktime
+                unlocktime,
+                toasted
             FROM achievements
             WHERE app_id = ?
             ORDER BY display_name COLLATE NOCASE
@@ -265,6 +267,7 @@ def get_achievements_by_app_id(app_id: str) -> list[dict]:
             "icon_gray": row[4],
             "achieved": row[5],
             "unlocktime": row[6],
+            "toasted": row[7],
         }
         for row in rows
     ]
@@ -287,6 +290,7 @@ def get_achievement_state_by_app_id(app_id: str) -> dict | None:
             "icon_gray": achievement["icon_gray"],
             "achieved": achievement["achieved"],
             "unlocktime": achievement["unlocktime"],
+            "toasted": achievement["toasted"],
         }
         for achievement in achievements
     ]
@@ -298,4 +302,18 @@ def get_achievement_state_by_app_id(app_id: str) -> dict | None:
         "unlocked": unlocked,
         "achievements": normalized,
     }
+
+def mark_achievement_toasted(app_id: str, api_name: str) -> None:
+    now = int(time.time())
+
+    with get_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            UPDATE achievements
+            SET toasted = 1,
+                updated_at = ?
+            WHERE app_id = ?
+              AND api_name = ?
+        """, (now, app_id, api_name))
+        conn.commit()
 

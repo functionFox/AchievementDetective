@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="fixed achievement refresh bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/services/steam_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/services/steam_service.py" afterDir="false" />
-    </list>
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="filter out games with no achievement schema" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,14 +104,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00150" summary="Ticker tape update">
-      <option name="closed" value="true" />
-      <created>1776422707227</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1776422707227</updated>
     </task>
     <task id="LOCAL-00151" summary="Ticker tape update">
       <option name="closed" value="true" />
@@ -500,11 +489,18 @@
       <option name="project" value="LOCAL" />
       <updated>1778019075329</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="filter out games with no achievement schema">
+      <option name="closed" value="true" />
+      <created>1778019631514</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1778019631514</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Environmental Variables instituted." />
     <MESSAGE value="Improved ordering/visibility of web-generated list" />
     <MESSAGE value="Implementing Library scan service" />
     <MESSAGE value="database implementation" />
@@ -529,6 +525,7 @@
     <MESSAGE value="fixed double toast bug" />
     <MESSAGE value="fixed game scan bug" />
     <MESSAGE value="fixed achievement refresh bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed achievement refresh bug" />
+    <MESSAGE value="filter out games with no achievement schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="filter out games with no achievement schema" />
   </component>
 </project>

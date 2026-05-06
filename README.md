@@ -76,8 +76,8 @@ https://steamcommunity.com/dev/apikey
    STEAM_STEAMID64=your_steamid64_here
    ```
    
-You can find your STEAMID64 by opening your profile page on Steam. The long number in the URL
-will be your STEAMID64.
+You can find your STEAM_STEAMID64 by opening your profile page on Steam. The long number in the URL
+will be your STEAM_STEAMID64.
 
 ---
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Adjusted config.html appearance, added dynamic variables to display current specific settings on slider bars">
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Patching api controller to not toast stale events on first time game load.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/services/achievement_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/services/achievement_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,14 +107,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00161" summary="Ticker tape update">
-      <option name="closed" value="true" />
-      <created>1776424057166</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1776424057166</updated>
     </task>
     <task id="LOCAL-00162" summary="Ticker tape update">
       <option name="closed" value="true" />
@@ -500,11 +492,18 @@
       <option name="project" value="LOCAL" />
       <updated>1778028481164</updated>
     </task>
-    <option name="localTasksCounter" value="210" />
+    <task id="LOCAL-00210" summary="Patching api controller to not toast stale events on first time game load.">
+      <option name="closed" value="true" />
+      <created>1778029896956</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1778029896956</updated>
+    </task>
+    <option name="localTasksCounter" value="211" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementing icon display" />
     <MESSAGE value="Toast" />
     <MESSAGE value="Adding display modes" />
     <MESSAGE value="Tuning Obelisk mode" />
@@ -529,6 +528,7 @@
     <MESSAGE value="Adding Obelisk options" />
     <MESSAGE value="Adjusted Obelisk settings" />
     <MESSAGE value="Adjusted config.html appearance, added dynamic variables to display current specific settings on slider bars" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted config.html appearance, added dynamic variables to display current specific settings on slider bars" />
+    <MESSAGE value="Patching api controller to not toast stale events on first time game load." />
+    <option name="LAST_COMMIT_MESSAGE" value="Patching api controller to not toast stale events on first time game load." />
   </component>
 </project>

@@ -24,6 +24,13 @@ class AchievementService:
         upsert_achievements(str(appid), state["achievements"])
         AchievementState.save_state(state)
 
+        if old_state is None:
+            for achievement in state["achievements"]:
+                if achievement["achieved"]:
+                    mark_achievement_toasted(str(appid), achievement["apiname"])
+
+            return state
+
         if old_state is not None:
             old_lookup = {
                 achievement["apiname"]: achievement

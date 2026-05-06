@@ -1,156 +1,131 @@
-# Achievement Detective
+# 🎯 Achievement Detective
 
-Achievement Detective is a local Flask-based OBS browser-source overlay for Steam achievements.
+A real-time Steam achievement tracker designed for OBS overlays.
 
-It polls Steam achievement data for a selected game, displays achievement progress in an overlay, and shows an animated toast when a new achievement unlock is detected.
+Displays your achievements as they unlock with animated toasts and a scrolling list — perfect for streamers who want their progress visible on screen.
 
-## Current features
+---
 
-- Steam owned-game scan through the Steam Web API
-- Local game selection/config page
-- Cached achievement data in SQLite
-- Cached achievement icons under `flask_app/static/icons/`
-- OBS browser-source overlay at `/`
-- Config page at `/config`
-- Display modes:
-  - ticker
-  - obelisk
-- Configurable overlay text color/stroke
-- Configurable ticker bar color/opacity
-- Animated achievement unlock toast with icon, title, and description
-- Test toast endpoint for layout/debugging
+## ✨ Features
 
-## Project status
+- 🔄 Real-time achievement polling  
+- 🎉 Toast notifications for newly unlocked achievements  
+- 📜 Scrolling achievement list (Ticker or Obelisk styles)  
+- 🎨 Customizable colors, opacity, and layout  
+- 🧠 Smart detection (no duplicate or historical spam)  
+- 🧪 Built-in test toast system for debugging  
 
-This project is currently in active development. It is functional enough for local testing, but setup and configuration are still developer-oriented.
+---
 
-Planned/future ideas include:
+## ⚠️ Requirements
 
-- Toast position options
-- Toast animation presets
-- Notification sounds
-- External event broadcasting for integrations such as Streamer.bot or OBS workflows
-- Optional clip-trigger workflows handled outside Achievement Detective
+- Python 3.10+  
+- Steam account with public game data  
+- Steam Web API Key  
 
-## Requirements
+Get your API key here:  
+https://steamcommunity.com/dev/apikey  
 
-- Python 3
-- Flask
-- python-dotenv
-- requests
-- A Steam Web API key
-- Your SteamID64
-- OBS Studio with a Browser Source
+---
 
-Until a dedicated dependency file is added, install the Python dependencies manually:
+## 🚀 Setup
 
-```bash
-python -m pip install flask python-dotenv requests
-```
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/functionFox/AchievementDetective.git
+   cd AchievementDetective
+   ```
 
-## Environment variables
+2. Create a virtual environment:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
 
-Create a `.env` file in the project root:
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```env
-SECRET_KEY=replace-this-with-any-local-dev-secret
-STEAM_API_KEY=your-steam-web-api-key
-STEAM_STEAMID64=your-steamid64
-```
+4. Add your Steam credentials:
 
-`SECRET_KEY` is used by Flask. `STEAM_API_KEY` and `STEAM_STEAMID64` are required for Steam API calls.
+   Create a `.env` file in the project root:
 
-## First-time database setup
+   ```env
+   STEAM_API_KEY=your_api_key_here
+   STEAM_ID=your_steamid64_here
+   ```
 
-Initialize the local SQLite database:
+---
 
-```bash
-python -c "from flask_app.services.db_service import init_db; init_db()"
-```
-
-This creates `achievement_detective.db` in the project root.
-
-## Running the app
-
-Start the Flask server:
+## ▶️ Running the App
 
 ```bash
 python server.py
 ```
 
-By default, the app runs at:
+Then open:
 
-```text
-http://127.0.0.1:5000/
-```
-
-The config page should open automatically. If it does not, open:
-
-```text
 http://127.0.0.1:5000/config
-```
 
-## OBS setup
+---
 
-Add a Browser Source in OBS with this URL:
+## 🎮 Using with OBS
 
-```text
-http://127.0.0.1:5000/
-```
+1. Add a **Browser Source**  
+2. Set URL to:
+   ```
+   http://127.0.0.1:5000/
+   ```
+3. Set width/height as desired  
+4. Done — your overlay will update automatically  
 
-Recommended starting size:
+---
 
-```text
-Width: 1920
-Height: 1080
-```
+## ⚙️ Configuration
 
-The ticker is designed to sit along the bottom of the scene, while achievement toasts appear above it.
+In the config page you can:
 
-## Basic usage
+- Select your active game  
+- Change display mode (Ticker / Obelisk)  
+- Adjust colors and styling  
+- Tune opacity and text stroke  
+- Control obelisk angle  
 
-1. Start the Flask server.
-2. Open the config page.
-3. Select a Steam game.
-4. Choose a display mode.
-5. Apply settings.
-6. Add or refresh the OBS Browser Source.
-7. Play the selected game and unlock an achievement.
+---
 
-Achievement Detective compares the previous cached achievement state against the latest Steam state. When it detects a newly unlocked achievement, it saves a latest-unlock event for the overlay to display.
+## 🧪 Testing Toasts
 
-## Testing the toast
-
-You can trigger a fake toast with curl:
+You can trigger test notifications:
 
 ```bash
-curl -X POST http://127.0.0.1:5000/api/test-toast \
-  -H "Content-Type: application/json" \
-  -d '{
-    "display_name": "1000K",
-    "description": "Attain a score of 1,000,000 in one hand.",
-    "icon": "icons/2379780/0ca3a30f4ba812b33ce85fc82b6d4ecc9f567df9.jpg"
-  }'
+curl -X POST http://127.0.0.1:5000/api/test-toast -H "Content-Type: application/json" -d '{"appid":"YOUR_APP_ID","apiname":"TEST","display_name":"Test Toast","description":"Testing notification."}'
 ```
 
-The icon path should be relative to `flask_app/static/`.
+---
 
-## Main routes
+## 🧠 Notes
 
-```text
-GET  /                         Overlay page
-GET  /config                   Config page
-GET  /api/health               Health check
-GET  /api/games                List cached/scanned games
-POST /api/select-game          Save active game and overlay settings
-GET  /api/active-game          Return active game/settings
-GET  /api/achievements         Return achievement state
-POST /api/refresh-achievements Refresh achievements for active/selected game
-GET  /api/state                Return current overlay state
-GET  /api/event                Return latest achievement event
-POST /api/test-toast           Trigger a fake toast event
-```
+- Achievements are cached locally in SQLite  
+- Historical achievements will not trigger notifications  
+- Toasts are queued and displayed sequentially  
+- Queue is capped to prevent overflow (20 events)  
 
-## Notes
+---
 
-Achievement Detective does not currently handle Twitch authentication or clip creation directly. The preferred future approach is for Achievement Detective to emit a local event when an achievement unlocks, allowing external tools such as Streamer.bot, OBS scripts, or Stream Deck workflows to handle Twitch-specific actions.
+## 📦 Status
+
+**Alpha — stable for personal use and development**
+
+Future improvements:
+- packaged release (no Python required)  
+- optional sound effects  
+- improved first-run setup  
+- backend proxy (remove API key requirement)  
+
+---
+
+## 💖 Credits
+
+Built by functionFox  
+Powered by caffeine, spite, and Steam APIs  

@@ -94,6 +94,12 @@ def select_game():
 
     set_setting("active_appid", str(app_id))
 
+    AchievementState.save_event({
+        "appid": str(app_id),
+        "latest": None,
+        "timestamp": int(time.time())
+    })
+
     if display_mode in {"obelisk", "ticker"}:
         set_setting("display_mode", display_mode)
 

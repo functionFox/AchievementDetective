@@ -342,7 +342,7 @@ html[data-display-mode="ticker"] body {
   align-items: center;
   overflow: visible;
   transform-origin: center center;
-  transform: rotateX(63deg) scale(1.55);
+  transform: rotateX(var(--obelisk-angle, 63deg)) scale(1.55);
   transform-style: preserve-3d;
 }
 

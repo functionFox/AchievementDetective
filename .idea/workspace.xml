@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="fixed config page showing incorrect values on initial page load/reopen">
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Tidying up config.html visuals">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app/templates/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/config.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,14 +110,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00157" summary="Ticker tape update">
-      <option name="closed" value="true" />
-      <created>1776423947287</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1776423947287</updated>
     </task>
     <task id="LOCAL-00158" summary="Ticker tape update">
       <option name="closed" value="true" />
@@ -500,11 +495,18 @@
       <option name="project" value="LOCAL" />
       <updated>1778023640614</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="Tidying up config.html visuals">
+      <option name="closed" value="true" />
+      <created>1778025291000</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1778025291000</updated>
+    </task>
+    <option name="localTasksCounter" value="207" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="corrections to api_controller" />
     <MESSAGE value="adjustments to config page" />
     <MESSAGE value="achievement service now detects changes in achievement status" />
     <MESSAGE value="Implementing icon caching" />
@@ -529,6 +531,7 @@
     <MESSAGE value="optimized game switching time on overlay" />
     <MESSAGE value="fixed last toast issued replaying on refresh" />
     <MESSAGE value="fixed config page showing incorrect values on initial page load/reopen" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed config page showing incorrect values on initial page load/reopen" />
+    <MESSAGE value="Tidying up config.html visuals" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tidying up config.html visuals" />
   </component>
 </project>

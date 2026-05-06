@@ -23,6 +23,10 @@ function applyOverlayTextSettings(settings) {
     "--overlay-text-stroke-color",
     settings.text_stroke_color || "#ffffff"
   );
+  document.documentElement.style.setProperty(
+    "--obelisk-angle",
+    `${settings.obelisk_angle || 63}deg`
+  );
 
   const tickerColor = settings.ticker_strip_color || "#141a28";
   const tickerOpacity = Number(settings.ticker_strip_opacity ?? 78) / 100;
@@ -362,6 +366,12 @@ async function loadActiveGame(syncControls = true) {
         tickerStripOpacityInput.value = data.ticker_strip_opacity;
       }
     }
+    if (data.obelisk_angle !== undefined) {
+      const obeliskAngleInput = document.getElementById("obelisk-angle-input");
+      if (obeliskAngleInput) {
+        obeliskAngleInput.value = data.obelisk_angle;
+      }
+    }
   }
 
   return data;
@@ -406,6 +416,8 @@ async function applySelectedGame() {
     const tickerStripOpacityInput = document.getElementById("ticker-strip-opacity-input");
     const tickerStripColor = tickerStripColorInput ? tickerStripColorInput.value : null;
     const tickerStripOpacity = tickerStripOpacityInput ? tickerStripOpacityInput.value : null;
+    const obeliskAngleInput = document.getElementById("obelisk-angle-input");
+    const obeliskAngle = obeliskAngleInput ? obeliskAngleInput.value : null;
 
     if (!appId) {
         return;
@@ -423,7 +435,8 @@ async function applySelectedGame() {
               text_stroke_width: textStrokeWidth,
               text_stroke_color: textStrokeColor,
               ticker_strip_color: tickerStripColor,
-              ticker_strip_opacity: tickerStripOpacity
+              ticker_strip_opacity: tickerStripOpacity,
+              obelisk_angle: obeliskAngle
             })
     });
 

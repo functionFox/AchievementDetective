@@ -85,6 +85,7 @@ def select_game():
     text_color = data.get("text_color")
     text_stroke_width = data.get("text_stroke_width")
     text_stroke_color = data.get("text_stroke_color")
+    obelisk_angle = data.get("obelisk_angle")
     ticker_strip_color = data.get("ticker_strip_color")
     ticker_strip_opacity = data.get("ticker_strip_opacity")
 
@@ -105,6 +106,9 @@ def select_game():
     if text_stroke_color:
         set_setting("text_stroke_color", str(text_stroke_color))
 
+    if obelisk_angle is not None:
+        set_setting("obelisk_angle", str(obelisk_angle))
+
     if ticker_strip_color:
         set_setting("ticker_strip_color", str(ticker_strip_color))
 
@@ -122,6 +126,7 @@ def get_active_game():
     text_color = get_setting("text_color") or "#000000"
     text_stroke_width = get_setting("text_stroke_width") or "0"
     text_stroke_color = get_setting("text_stroke_color") or "#ffffff"
+    obelisk_angle = get_setting("obelisk_angle") or "63"
     ticker_strip_color = get_setting("ticker_strip_color") or "#141a28"
     ticker_strip_opacity = get_setting("ticker_strip_opacity") or "78"
 
@@ -132,6 +137,7 @@ def get_active_game():
             "text_color": text_color,
             "text_stroke_width": text_stroke_width,
             "text_stroke_color": text_stroke_color,
+            "obelisk_angle": obelisk_angle,
             "ticker_strip_color": ticker_strip_color,
             "ticker_strip_opacity": ticker_strip_opacity,
             "game": None
@@ -145,6 +151,7 @@ def get_active_game():
         "text_color": text_color,
         "text_stroke_width": text_stroke_width,
         "text_stroke_color": text_stroke_color,
+        "obelisk_angle": obelisk_angle,
         "ticker_strip_color": ticker_strip_color,
         "ticker_strip_opacity": ticker_strip_opacity,
         "game": game

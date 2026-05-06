@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Fixed toasts appearing unexpectedly when loading a game that hasn't been recorded in the database">
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Implementing queue system for multiple achievement unlocks in a short period of time.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/models/achievement_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/models/achievement_state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +107,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00163" summary="Ticker tape update">
-      <option name="closed" value="true" />
-      <created>1776424089164</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1776424089165</updated>
     </task>
     <task id="LOCAL-00164" summary="Ticker tape update">
       <option name="closed" value="true" />
@@ -501,11 +492,18 @@
       <option name="project" value="LOCAL" />
       <updated>1778031783856</updated>
     </task>
-    <option name="localTasksCounter" value="212" />
+    <task id="LOCAL-00212" summary="Implementing queue system for multiple achievement unlocks in a short period of time.">
+      <option name="closed" value="true" />
+      <created>1778033161418</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1778033161418</updated>
+    </task>
+    <option name="localTasksCounter" value="213" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding display modes" />
     <MESSAGE value="Tuning Obelisk mode" />
     <MESSAGE value="Added text config options" />
     <MESSAGE value="Open config.html by default first run" />
@@ -530,6 +528,7 @@
     <MESSAGE value="Adjusted config.html appearance, added dynamic variables to display current specific settings on slider bars" />
     <MESSAGE value="Patching api controller to not toast stale events on first time game load." />
     <MESSAGE value="Fixed toasts appearing unexpectedly when loading a game that hasn't been recorded in the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed toasts appearing unexpectedly when loading a game that hasn't been recorded in the database" />
+    <MESSAGE value="Implementing queue system for multiple achievement unlocks in a short period of time." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing queue system for multiple achievement unlocks in a short period of time." />
   </component>
 </project>

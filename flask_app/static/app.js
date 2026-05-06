@@ -1,5 +1,5 @@
-let lastEventTimestamp = 0;
-let hasInitializedEventTimestamp = false;
+let toastQueue = [];
+let isToastActive = false;
 let currentOverlayState = null;
 let pendingOverlayState = null;
 let overlayCycleMode = null;
@@ -146,6 +146,56 @@ function renderTicker(state) {
     `;
 }
 
+function showNextToast() {
+    if (isToastActive || toastQueue.length === 0) {
+        return;
+    }
+
+    isToastActive = true;
+
+    const event = toastQueue.shift();
+    const latest = document.getElementById("latest");
+
+    if (!latest || !event.latest) {
+        isToastActive = false;
+        showNextToast();
+        return;
+    }
+
+    const latestIcon = event.latest.icon || event.latest.icon_gray || "";
+    const latestDescription = event.latest.description || "";
+
+    latest.innerHTML = `
+        <div class="achievement-toast unlocked">
+            <img class="achievement-toast-icon" src="/static/${latestIcon}" alt="">
+            <div class="achievement-toast-text">
+                <div class="achievement-toast-title">
+                    Unlocked: ${event.latest.display_name}
+                </div>
+                ${latestDescription ? `
+                    <div class="achievement-toast-description">
+                        ${latestDescription}
+                    </div>
+                ` : ""}
+            </div>
+        </div>
+    `;
+
+    latest.classList.remove("toast-anim-jump");
+    void latest.offsetWidth;
+    latest.classList.add("show", "toast-anim-jump");
+
+    setTimeout(() => {
+        latest.classList.remove("toast-anim-jump");
+    }, 1200);
+
+    setTimeout(() => {
+        latest.classList.remove("show");
+        isToastActive = false;
+        showNextToast();
+    }, 3000);
+}
+
 function startTickerCycle() {
     overlayCycleMode = "ticker";
 
@@ -256,46 +306,11 @@ async function updateOverlay() {
             list.innerHTML = renderObelisk(state);
             startObeliskCycle();
         }
-    }
 
-        if (!hasInitializedEventTimestamp) {
-            lastEventTimestamp = event.timestamp || 0;
-            hasInitializedEventTimestamp = true;
+        if (event.latest) {
+            toastQueue.push(event);
+            showNextToast();
         }
-
-        if (event.timestamp > lastEventTimestamp && event.latest) {
-        lastEventTimestamp = event.timestamp;
-
-        const latest = document.getElementById("latest");
-        const latestIcon = event.latest.icon || event.latest.icon_gray || "";
-        const latestDescription = event.latest.description || "";
-
-        latest.innerHTML = `
-            <div class="achievement-toast unlocked">
-            <img class="achievement-toast-icon" src="/static/${latestIcon}" alt="">
-                <div class="achievement-toast-text">
-                    <div class="achievement-toast-title">
-                        Unlocked: ${event.latest.display_name}
-                    </div>
-                    ${latestDescription ? `
-                        <div class="achievement-toast-description">
-                            ${latestDescription}
-                        </div>
-                    ` : ""}
-                    </div>
-                </div>
-               `;
-        latest.classList.remove("toast-anim-jump");
-        void latest.offsetWidth;
-        latest.classList.add("show", "toast-anim-jump");
-
-        setTimeout(() => {
-            latest.classList.remove("toast-anim-jump");
-        }, 1200);
-
-        setTimeout(() => {
-            latest.classList.remove("show");
-        }, 3000);
     }
 }
 
@@ -510,6 +525,10 @@ if (document.getElementById("counter")) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+    if (!document.getElementById("game-select")) {
+        return;
+    }
+
     await loadGames();
     const activeGame = await loadActiveGame(true);
 

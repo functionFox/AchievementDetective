@@ -73,7 +73,7 @@ https://steamcommunity.com/dev/apikey
 
    ```env
    STEAM_API_KEY=your_api_key_here
-   STEAM_ID=your_steamid64_here
+   STEAM_STEAMID64=your_steamid64_here
    ```
 
 ---

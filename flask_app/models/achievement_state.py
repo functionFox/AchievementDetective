@@ -18,8 +18,7 @@ class AchievementState:
         if not os.path.exists(EVENT_FILE):
             with open(EVENT_FILE, "w", encoding="utf-8") as file:
                 json.dump({
-                    "latest": None,
-                    "timestamp": 0
+                    "events": []
                 }, file, indent=2)
 
     @staticmethod
@@ -51,12 +50,42 @@ class AchievementState:
     @classmethod
     def load_event(cls):
         cls.ensure_files()
-        return cls._load_json(EVENT_FILE, {
-            "latest": None,
-            "timestamp": 0
+        data = cls._load_json(EVENT_FILE, {
+            "events": []
         })
+
+        if "events" not in data:
+            data = {
+                "events": [data] if data.get("latest") else []
+            }
+
+        return data
 
     @classmethod
     def save_event(cls, data):
         cls.ensure_files()
-        cls._save_json(EVENT_FILE, data)
+        event_data = cls.load_event()
+        events = event_data.get("events", [])
+
+        if data.get("latest"):
+            events.append(data)
+
+        cls._save_json(EVENT_FILE, {
+            "events": events[-20:]
+        })
+
+    @classmethod
+    def pop_next_event_for_appid(cls, appid):
+        cls.ensure_files()
+        event_data = cls.load_event()
+        events = event_data.get("events", [])
+
+        for index, event in enumerate(events):
+            if str(event.get("appid")) == str(appid):
+                next_event = events.pop(index)
+                cls._save_json(EVENT_FILE, {
+                    "events": events[-20:]
+                })
+                return next_event
+
+        return {}

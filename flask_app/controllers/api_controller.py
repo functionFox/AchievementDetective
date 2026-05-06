@@ -38,15 +38,11 @@ def get_state():
 @app.route("/api/event")
 def get_event():
     active_app_id = get_setting("active_appid")
-    event = AchievementState.load_event()
 
     if not active_app_id:
         return jsonify({})
 
-    if str(event.get("appid")) != str(active_app_id):
-        return jsonify({})
-
-    return jsonify(event)
+    return jsonify(AchievementState.pop_next_event_for_appid(active_app_id))
 
 @app.route("/api/achievements", methods=["GET"])
 def get_achievements():

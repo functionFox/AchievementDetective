@@ -17,6 +17,26 @@ Displays your achievements as they unlock with animated toasts and a scrolling l
 
 ---
 
+## 💖 Support Development
+
+Achievement Detective is currently developed and maintained in my free time.
+
+If you enjoy the project, find it useful for your streams, or just want to support continued updates and improvements, you can support development here:
+
+- ☕ Ko-fi: https://ko-fi.com/functionfox
+- 💸 GitHub Sponsors: https://github.com/sponsors/functionFox
+
+Support helps fund continued work on:
+- packaged releases
+- new overlay styles and animations
+- sound effects and customization
+- quality-of-life improvements
+- broader platform support
+
+No features are paywalled, and the project will remain freely available.
+
+If this made your stream setup a little cooler, consider tossing a coin to the fox 🦊
+
 ## ⚠️ Requirements
 
 - Python 3.10+  
@@ -122,6 +142,7 @@ Future improvements:
 - optional sound effects  
 - improved first-run setup  
 - backend proxy (remove API key requirement)  
+- Additional and more modular layout formats
 
 ---
 
@@ -129,3 +150,4 @@ Future improvements:
 
 Built by functionFox  
 Powered by caffeine, spite, and Steam APIs  
+If this helped your stream look cooler, consider tossing a coin 🪙

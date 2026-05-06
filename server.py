@@ -1,4 +1,5 @@
 from threading import Timer
+import os
 import webbrowser
 
 from flask_app import app
@@ -22,5 +23,9 @@ if __name__ == "__main__":
     games_with_achievements = steam.filter_games_with_achievements(installed_games)
 
     sync_installed_games(games_with_achievements)
-    # Timer(1.0, open_config_page).start()
-    app.run(debug=True)
+    DEBUG = True
+
+    if (not DEBUG) or os.environ.get("WERKZEUG_RUN_MAIN") == "true":
+        Timer(1.0, open_config_page).start()
+
+    app.run(debug=DEBUG)

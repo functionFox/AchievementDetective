@@ -524,6 +524,25 @@ if (document.getElementById("counter")) {
     }, 1000);
 }
 
+async function shutdownServer() {
+    const confirmed = window.confirm("Exit Achievement Detective?");
+
+    if (!confirmed) {
+        return;
+    }
+
+    await fetch("/api/shutdown", {
+        method: "POST"
+    });
+
+    document.body.innerHTML = `
+        <main class="container py-4 text-center">
+            <h1>Achievement Detective has shut down.</h1>
+            <p>You can close this tab now.</p>
+        </main>
+    `;
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     if (!document.getElementById("game-select")) {
         return;
@@ -536,6 +555,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("game-select").value = activeGame.active_app_id;
         await loadAchievements(activeGame.active_app_id);
     }
+
+    document
+        .getElementById("shutdown-button")
+        .addEventListener("click", shutdownServer);
 
     document
         .getElementById("apply-game-button")

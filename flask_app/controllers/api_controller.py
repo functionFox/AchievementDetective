@@ -1,4 +1,7 @@
 import time
+import os
+import signal
+import threading
 
 from flask import jsonify, request
 from flask_app import app
@@ -247,3 +250,15 @@ def test_toast():
     set_setting(test_toast_key, "1")
 
     return jsonify({"ok": True, "latest": fake_achievement})
+
+@app.route("/api/shutdown", methods=["POST"])
+def shutdown_server():
+    def stop_process():
+        os.kill(os.getpid(), signal.SIGTERM)
+
+    threading.Timer(0.25, stop_process).start()
+
+    return jsonify({
+        "ok": True,
+        "message": "Achievement Detective is shutting down."
+    })

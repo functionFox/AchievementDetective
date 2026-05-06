@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Updated README.md">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Updated README.md, added missing requirements.txt">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,14 +106,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00168" summary="Ticker tape update">
-      <option name="closed" value="true" />
-      <created>1776424370885</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1776424370885</updated>
     </task>
     <task id="LOCAL-00169" summary="Ticker tape update">
       <option name="closed" value="true" />
@@ -501,11 +491,18 @@
       <option name="project" value="LOCAL" />
       <updated>1778052689101</updated>
     </task>
-    <option name="localTasksCounter" value="217" />
+    <task id="LOCAL-00217" summary="Updated README.md, added missing requirements.txt">
+      <option name="closed" value="true" />
+      <created>1778099830085</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1778099830085</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added text config options" />
     <MESSAGE value="Open config.html by default first run" />
     <MESSAGE value="Adjustments to ticker mode" />
     <MESSAGE value="De-jankifying style.css" />
@@ -530,6 +527,7 @@
     <MESSAGE value="Fixed toasts appearing unexpectedly when loading a game that hasn't been recorded in the database" />
     <MESSAGE value="Implementing queue system for multiple achievement unlocks in a short period of time." />
     <MESSAGE value="Updated README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md" />
+    <MESSAGE value="Updated README.md, added missing requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md, added missing requirements.txt" />
   </component>
 </project>

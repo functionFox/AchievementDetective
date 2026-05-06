@@ -306,11 +306,11 @@ async function updateOverlay() {
             list.innerHTML = renderObelisk(state);
             startObeliskCycle();
         }
+    }
 
-        if (event.latest) {
-            toastQueue.push(event);
-            showNextToast();
-        }
+    if (event.latest) {
+        toastQueue.push(event);
+        showNextToast();
     }
 }
 

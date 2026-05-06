@@ -10,6 +10,29 @@ async function fetchJson(url) {
     return await response.json();
 }
 
+function updateSliderValueLabels() {
+    const obeliskAngleInput = document.getElementById("obelisk-angle-input");
+    const obeliskAngleValue = document.getElementById("obelisk-angle-value");
+
+    if (obeliskAngleInput && obeliskAngleValue) {
+        obeliskAngleValue.textContent = `${obeliskAngleInput.value}°`;
+    }
+
+    const tickerOpacityInput = document.getElementById("ticker-strip-opacity-input");
+    const tickerOpacityValue = document.getElementById("ticker-strip-opacity-value");
+
+    if (tickerOpacityInput && tickerOpacityValue) {
+        tickerOpacityValue.textContent = `${tickerOpacityInput.value}%`;
+    }
+
+    const strokeWidthInput = document.getElementById("text-stroke-width-input");
+    const strokeWidthValue = document.getElementById("text-stroke-width-value");
+
+    if (strokeWidthInput && strokeWidthValue) {
+        strokeWidthValue.textContent = `${strokeWidthInput.value}px`;
+    }
+}
+
 function applyOverlayTextSettings(settings) {
   document.documentElement.style.setProperty(
     "--overlay-text-color",
@@ -373,7 +396,7 @@ async function loadActiveGame(syncControls = true) {
       }
     }
   }
-
+  updateSliderValueLabels();
   return data;
 }
 
@@ -506,6 +529,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     document
         .getElementById("rescan-games-button")
         .addEventListener("click", rescanGames);
+
+        [
+            "obelisk-angle-input",
+            "ticker-strip-opacity-input",
+            "text-stroke-width-input"
+        ].forEach((id) => {
+            const input = document.getElementById(id);
+            if (input) {
+                input.addEventListener("input", updateSliderValueLabels);
+            }
+        });
 
     if (document.getElementById("game-select")) {
         setInterval(async () => {

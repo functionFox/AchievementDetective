@@ -8,14 +8,17 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet">
 </head>
-<body class="bg-body-tertiary">
+<body class="bg-dark-subtle">
     <main class="container py-4">
-        <h1>Achievement Detective Config</h1>
+        <h1 class="display-5 fw-bold text-center mb-4">Achievement Detective Config</h1>
+        <p class="text-center text-muted mb-4">
+            Configure your Steam achievement overlay for OBS.
+        </p>
 
             <div class="row g-4">
             <div class="col-lg-6">
-            <div class="card shadow-sm">
-                <div class="card-body">
+            <div class="card shadow-sm border-0 bg-secondary bg-opacity-50">
+                <div class="card-body p-4">
                     <h5 class="card-title mb-3">Game Settings</h5>
 
                     <label for="game-select">Game</label>
@@ -29,7 +32,9 @@
                         <option value="ticker">Ticker</option>
                     </select>
 
-                    <label for="obelisk-angle-input" class="form-label mt-3">Obelisk Angle</label>
+                    <label for="obelisk-angle-input" class="form-label mt-3">
+                        Obelisk Angle: <span id="obelisk-angle-value">63°</span>
+                    </label>
                     <input
                         id="obelisk-angle-input"
                         class="form-range"
@@ -43,21 +48,25 @@
                     <label for="ticker-strip-color-input">Ticker Bar Color</label>
                     <input id="ticker-strip-color-input" class="form-select" type="color" value="#141a28">
 
-                    <label for="ticker-strip-opacity-input">Ticker Bar Opacity</label>
+                    <label for="ticker-strip-opacity-input" class="form-label">
+                        Ticker Bar Opacity: <span id="ticker-strip-opacity-value">78%</span>
+                    </label>
                     <input id="ticker-strip-opacity-input" class="form-range" type="range" min="0" max="100" step="1" value="78">
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-6">
-                <div class="card shadow-sm">
-                    <div class="card-body">
+                <div class="card shadow-sm border-0 bg-secondary bg-opacity-50">
+                    <div class="card-body p-4">
                         <h5 class="card-title mb-3">Text Settings</h5>
 
                         <label for="text-color-input">Text Color</label>
                         <input id="text-color-input" class="form-select" type="color" value="#000000">
 
-                        <label for="text-stroke-width-input">Stroke Width</label>
+                        <label for="text-stroke-width-input" class="form-label">
+                            Stroke Width: <span id="text-stroke-width-value">0px</span>
+                        </label>
                         <input id="text-stroke-width-input" class="form-range" type="range" min="0" max="4" step="1" value="0">
 
                         <label for="text-stroke-color-input">Stroke Color</label>
@@ -66,18 +75,26 @@
                 </div>
             </div>
 
-            <div class="mt-3 d-flex gap-2 flex-wrap">
-                <button id="apply-game-button" type="button">Apply</button>
-                <button id="refresh-game-button" type="button">Refresh Achievements</button>
-                <button id="rescan-games-button" type="button">Rescan Steam Games</button>
+            <div class="mt-4 d-flex gap-2 flex-wrap justify-content-center">
+                <button id="apply-game-button" class="btn btn-primary" type="button">Apply</button>
+                <button id="refresh-game-button" class="btn btn-secondary" type="button">Refresh Achievements</button>
+                <button id="rescan-games-button" class="btn btn-secondary" type="button">Rescan Steam Games</button>
             </div>
         </div>
 
-            <h2>Active Game</h2>
-            <pre id="active-game-output">No active game selected.</pre>
+            <div class="card shadow-sm border-0 bg-secondary bg-opacity-50 mt-4">
+                <div class="card-body p-4">
+                    <h5 class="card-title mb-3">Active Game</h5>
+                    <pre id="active-game-output" class="border rounded bg-dark text-light p-3 overflow-auto mb-0" style="max-height: 260px;">No active game selected.</pre>
+                </div>
+            </div>
 
-            <h2>Achievements</h2>
-            <pre id="achievements-output">No achievement data loaded.</pre>
+            <div class="card shadow-sm border-0 bg-secondary bg-opacity-50 mt-4">
+                <div class="card-body p-4">
+                    <h5 class="card-title mb-3">Achievements</h5>
+                    <pre id="achievements-output" class="border rounded bg-dark text-light p-3 overflow-auto mb-0" style="max-height: 360px;">No achievement data loaded.</pre>
+                </div>
+            </div>
 
             <script src="{{ url_for('static', filename='app.js') }}"></script>
     </main>

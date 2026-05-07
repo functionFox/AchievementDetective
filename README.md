@@ -15,6 +15,10 @@ Displays your achievements as they unlock with animated toasts and a scrolling l
 - 🧠 Smart detection (no duplicate or historical spam)  
 - 🧪 Built-in test toast system for debugging  
 
+## ✨✨ Latest Update(s)
+- Config page opens on launch
+- Config page now has a button to end the program
+
 ---
 
 ## 💖 Support Development
@@ -146,6 +150,7 @@ Future improvements:
 - improved first-run setup  
 - backend proxy (remove API key requirement)  
 - Additional and more modular layout formats
+- RetroAchievements compatibility
 
 ---
 

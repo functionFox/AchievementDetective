@@ -91,9 +91,7 @@ will be your STEAM_STEAMID64.
 python server.py
 ```
 
-Then open:
-
-http://127.0.0.1:5000/config
+http://127.0.0.1:5000/config should open in your preferred browser.
 
 ---
 

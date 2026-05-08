@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Updated README.md, added missing requirements.txt">
+    <list default="true" id="ded38ce4-22ba-4f2d-8a42-0aa42f9752b4" name="Changes" comment="Updated README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/controllers/api_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/static/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_app/templates/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/config.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/services/db_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/services/db_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,22 +108,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774409588029</updated>
-    </task>
-    <task id="LOCAL-00171" summary="Ticker tape update">
-      <option name="closed" value="true" />
-      <created>1776424650913</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1776424650913</updated>
-    </task>
-    <task id="LOCAL-00172" summary="Ticker tape update">
-      <option name="closed" value="true" />
-      <created>1776424681326</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1776424681326</updated>
     </task>
     <task id="LOCAL-00173" summary="Ticker tape update">
       <option name="closed" value="true" />
@@ -503,11 +485,26 @@
       <option name="project" value="LOCAL" />
       <updated>1778101322734</updated>
     </task>
-    <option name="localTasksCounter" value="220" />
+    <task id="LOCAL-00220" summary="Added code to automatically launch the config page to your preferred browser, and added a button to the config page that ends the program.">
+      <option name="closed" value="true" />
+      <created>1778111259673</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1778111259673</updated>
+    </task>
+    <task id="LOCAL-00221" summary="Updated README.md">
+      <option name="closed" value="true" />
+      <created>1778112754806</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1778112754806</updated>
+    </task>
+    <option name="localTasksCounter" value="222" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Open config.html by default first run" />
     <MESSAGE value="Adjustments to ticker mode" />
     <MESSAGE value="De-jankifying style.css" />
     <MESSAGE value="Ticker tape update" />
@@ -530,8 +527,9 @@
     <MESSAGE value="Patching api controller to not toast stale events on first time game load." />
     <MESSAGE value="Fixed toasts appearing unexpectedly when loading a game that hasn't been recorded in the database" />
     <MESSAGE value="Implementing queue system for multiple achievement unlocks in a short period of time." />
-    <MESSAGE value="Updated README.md" />
     <MESSAGE value="Updated README.md, added missing requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md, added missing requirements.txt" />
+    <MESSAGE value="Added code to automatically launch the config page to your preferred browser, and added a button to the config page that ends the program." />
+    <MESSAGE value="Updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md" />
   </component>
 </project>

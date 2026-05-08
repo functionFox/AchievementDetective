@@ -16,8 +16,7 @@ Displays your achievements as they unlock with animated toasts and a scrolling l
 - 🧪 Built-in test toast system for debugging  
 
 ## ✨✨ Latest Update(s)
-- Config page opens on launch
-- Config page now has a button to end the program
+- Fixed a leak in the database
 
 ---
 
